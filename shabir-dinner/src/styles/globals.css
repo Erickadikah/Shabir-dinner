@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  box-sizing: border-box;
+}
+
 .input-text {
   /* Base styles */
   margin-top: 1rem;
@@ -27,4 +31,14 @@
 .input-text:focus {
   border-color: #87ceeb; /* Assuming sky-500 is #87ceeb */
   box-shadow: 0 0 0 2px #87ceeb; /* Assuming ring-1 is 2px and sky-500 is #87ceeb */
+}
+
+.pop-out-image {
+  transform: scale(1); /* Initial scale - no pop-out effect */
+  transition: transform 0.3s ease; /* Smooth transition when scaling changes */
+}
+
+/* The pop-out effect on hover */
+.pop-out-image:hover {
+  transform: scale(1.1); /* Slightly larger scale on hover - the image will pop out */
 }

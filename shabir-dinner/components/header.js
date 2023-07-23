@@ -11,7 +11,7 @@ const header = () => {
       <input type='text' className='input-text' placeholder='Search..' />
     </div>
     <div className='shrink w-80 sm:order-2'>
-      <a className='font-bold font-weight-900 text-2xl text-green-900'> Shabir Dinner</a>
+      <a className='font-bold font-weight-900 text-2xl text-green-900'>Dinner</a>
     </div>
     <div className='w-96 order-3 flex justify-center'>
       <div className="flex gap-6 sm:mb-10">
