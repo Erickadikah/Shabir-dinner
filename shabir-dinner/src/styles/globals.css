@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700&family=Inter:wght@100&family=Montserrat:ital,wght@0,100;1,200&family=Poppins&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input-text {
+  /* Base styles */
+  margin-top: 1rem;
+  /* display: block; */
+  width: 200px;
+  /* padding: 3px 2px; */
+  background-color: white;
+  /* border: 1px solid #808080; Assuming slate-300 is equivalent to #808080 */
+  border-radius: 9999px; /* To make it a circle, assuming rounded-full provides a circle */
+  font-size: 0.875rem; /* Assuming text-sm is 0.875rem */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Assuming shadow-sm provides this shadow */
+  height: 2.50rem; /* Assuming h-9 is 2.25rem */
+  align-items: center;
+  text-align: center;
+  margin-top: auto;
+
+  /* Focus styles */
+  outline: none;
+}
+
+.input-text:focus {
+  border-color: #87ceeb; /* Assuming sky-500 is #87ceeb */
+  box-shadow: 0 0 0 2px #87ceeb; /* Assuming ring-1 is 2px and sky-500 is #87ceeb */
+}
