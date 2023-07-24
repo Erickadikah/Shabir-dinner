@@ -42,3 +42,10 @@
 .pop-out-image:hover {
   transform: scale(1.1); /* Slightly larger scale on hover - the image will pop out */
 }
+
+.custom-list li::before {
+    content: "\2192"; /* Unicode for right arrow (→) */
+    padding-right: 5px;
+    color: darkgoldenrod;
+    font-size: 1.5rem;
+}
