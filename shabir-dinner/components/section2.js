@@ -3,11 +3,11 @@ import React from "react";
 const section2 = () => {
   return (
     <section
-      style={{ width: "100vw", height: "90vh", background: "#E9F8F5" }}
-      className="mb-20"
+      style={{ width: "100vw", height: '100%',background: "#E9F8F5" }}
+      className=""
     >
-      <h1 className="text-center mt-10 font-extrabold text-3xl"> Our Top Categories</h1>
-      <div className="flex flex-wrap justify-center gap-4 mt-20 p-20">
+      <h1 className="text-center py-10 font-extrabold text-3xl"> Our Top Categories</h1>
+      <div className="flex-1/4 sm:flex-1/4 flex flex-wrap justify-center gap-4 mt-20 py-20">
         <div className="rounded-full w-40 h-10 bg-customYellow flex justify-center items-center hover:bg-yellow-500">
           Chicken
         </div>

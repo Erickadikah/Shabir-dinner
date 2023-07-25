@@ -9,34 +9,32 @@ const section3 = () => {
   };
   return (
     <section
-      style={{ width: "100vw", height: "100vh", background: "#FFFFFF" }}
-      className=""
+      style={{ width: "100vw", height: "100%", background: "#FFFFFF" }}
+      className="justify-center items-center lg:flex sm:block px-10"
     >
-      <div className=" justify-items-center p-20 lg:flex w-90">
-        <div>
-          <Image src="/images/grill1.jpg" className="pop-out-image" width={400} height={200} />
+      <div class="block md:flex mt-20">
+        <div className="">
+          <Image src="/images/grill1.jpg " width={400} height={200} />
         </div>
-        <div className="flex-1 px-8">
+        <div className="flex-1 px-6">
           <h1 className="text-xl font-bold"> ABOUT US</h1>
           <h1 className="text-3xl font-extrabold">
             Welcome to Dinner{" "}
             <span className="text-yellow-500">
-              the best place to find the best recipes for
+              the best place to find recipes for
               and order food{" "}
             </span>
           </h1>
-          <p className="block">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            voluptatum, voluptate, quibusdam, quia voluptas quod quos dolorum
-            voluptatibus quae quas fugit. Quisquam voluptatum, voluptate,
-            quibusdam, quia voluptas quod quos dolorum voluptatibus quae quas
-            fugit.
+          <p className="block mt-8 break-words">
+            Lorem ipsum dolor sit amet consectetur <br></br>adipisicing elit. Quisquam
+            voluptatum, voluptate, quibusdam, <br></br> quia voluptas quod quos dolorum
+            voluptatibus quae quas fugit. <br></br>Quisquam voluptatum, voluptate,
           </p>
           <br></br>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            voluptatum, voluptate, quibusdam, quia voluptas quod quos dolorum
-            voluptatibus quae quas fugit. Quisquam voluptatum, voluptate,
+            Lorem ipsum dolor sit amet consectetur<br></br> adipisicing elit. Quisquam
+            voluptatum, voluptate, quibusdam, quia<br></br> voluptas quod quos dolorum
+            voluptatibus quae quas fugit. Quisquam<br></br> voluptatum, voluptate,
             quibusdam,
           </p>
           <br></br>
