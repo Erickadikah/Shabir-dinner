@@ -11,11 +11,11 @@ const section3 = () => {
     <section
       style={{ width: "100vw", height: "100%", background: "#FFFFFF" }}
       className="justify-center items-center sm:block px-10">
-      <div class="block md:flex mt-20">
+      <div class="block md:flex mt-20 justify-center items-center">
         <div className="">
           <Image src="/images/grill1.jpg " width={400} height={200} />
         </div>
-        <div className="flex-1 px-6">
+        <div className="flex-1 px-6 justify-center items-center">
           <h1 className="text-xl font-bold"> ABOUT US</h1>
           <h1 className="text-3xl font-extrabold">
             Welcome to Dinner{" "}
@@ -53,7 +53,7 @@ const section3 = () => {
           </ul>
           <br></br>
           <div
-            className=" bg-yellow-500 flex justify-center items-center mb-20 hover:bg-yellow-700"
+            className=" bg-yellow-500 flex justify-center items-center border rounded-lg mb-20 hover:bg-yellow-700"
             style={{
               width: "150px",
               height: "60px",
@@ -65,13 +65,11 @@ const section3 = () => {
           </div>
         </div>
       </div>
-      <div class="block md:flex mt-20">
-      <div class="block md:flex mt-20">
+      <div class="block md:flex mt-20 justify-center items-center">
         <div className="">
-          <Image src="/images/pilau.jpg " width={400} height={200} />
+          <Image src="/images/pilau.jpg" width={400} height={400} />
         </div>
         <div className="flex-1 px-6">
-          <h1 className="text-xl font-bold">Get Variety Of Articles On Cooking </h1>
           <h1 className="text-3xl font-extrabold">
             Welcome to Dinner{" "}
             <span className="text-yellow-500">
@@ -108,7 +106,7 @@ const section3 = () => {
           </ul>
           <br></br>
           <div
-            className=" bg-yellow-500 flex justify-center items-center mb-20 hover:bg-yellow-700"
+            className=" bg-yellow-500 flex justify-center items-center border rounded-lg mb-20 hover:bg-yellow-700"
             style={{
               width: "150px",
               height: "60px",
@@ -116,10 +114,9 @@ const section3 = () => {
               alignItems: "center",
             }}
           >
-            <p className=" text-sm text-white">Read My Articles</p>
+            <p className="text-sm text-white">Read My Articles</p>
           </div>
         </div>
-      </div>
       </div>
     </section>
   );

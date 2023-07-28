@@ -19,7 +19,6 @@ const section1 = () => {
         </motion.div>
         <motion.div
           animate={{ rotate: [0, 360, 360, 0] }}
-          // transition={{ repeat: Infinity, duration: 3}}
         >
           <Image src={icon2} className="w-10 h-10 pop-out-image" />
         </motion.div>

@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import photo from "../public/images/chef.svg";
 import { GiForkKnifeSpoon } from "react-icons/gi";
+import { IoFastFoodSharp } from "react-icons/io5";
+import { PiHamburgerBold } from "react-icons/pi";
 
 const section2 = () => {
   return (
@@ -9,11 +11,24 @@ const section2 = () => {
       style={{ width: "100vw", height: "100%", background: "#E9F8F5" }}
       className=" items-center mt-20 sm:block px-10"
     >
-      <div className="flex justify-center align-center py-20">
-        <GiForkKnifeSpoon size={40}/>
-        {/*<Image src={photo} className="w-20 h-20" />*/}
-      </div>
-      <h1 className="text-center font-extrabold text-3xl border rounded-full">
+    <div className="flex flex-wrap justify-center items-center gap-2">
+    <div className="flex justify-center  py-8">
+    <div className="rounded-full shadow-lg p-8">
+      <GiForkKnifeSpoon size={35} />
+    </div>
+  </div>
+  <div className="flex justify-center  py-8">
+    <div className="rounded-full shadow-lg p-8">
+      <IoFastFoodSharp size={35} />
+    </div>
+  </div>
+  <div className="flex justify-center  py-8">
+    <div className="rounded-full shadow-lg p-8">
+      <PiHamburgerBold size={35} />
+    </div>
+  </div>
+    </div>
+      <h1 className="text-center font-extrabold text-3xl">
         {" "}
         Our Top Categories
       </h1>
