@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const section3 = () => {
   const imageVariants = {
-    hidden: { opacity: 0, scale: 0.8 }, // Initial state: hidden and scaled down
+    hidden: { opacity: 0, scale: 0.8 },
     visible: { opacity: 1, scale: 1 }, // Later state: visible and original scale
   };
   return (
@@ -15,27 +15,27 @@ const section3 = () => {
         <div className="">
           <Image src="/images/grill1.jpg " width={400} height={200} />
         </div>
-        <div className="flex-1 px-6 justify-center items-center">
+        <div className="flex-1 px-4 justify-center items-center">
           <h1 className="text-xl font-bold"> ABOUT US</h1>
-          <h1 className="text-3xl font-extrabold">
+          <h1 className="text-2xl font-extrabold">
             Welcome to Dinner{" "}
             <span className="text-yellow-500">
               the best place to find recipes for
               and order food{" "}
             </span>
           </h1>
-          <p className="block mt-8 break-words">
+          <p className="block mt-2 break-words">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
             voluptatum, voluptate, quibusdam, quia voluptas quod quos dolorum
-            voluptatibus quae quas fugit. <br></br>Quisquam voluptatum, voluptate,
+            voluptatibus quae quas fugit.  voluptatum, voluptate,
           </p>
           <br></br>
           <p>
-            Lorem ipsum dolor sit amet consectetur<br></br> adipisicing elit. Quisquam
-            voluptatum, voluptate, quibusdam, quia<br></br> voluptas quod quos dolorum
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            voluptatum, voluptate, quibusdam, quia voluptas quod quos dolorum
           </p>
           <br></br>
-          <ul class="flex gap-10 sm:flex-row">
+          <ul class="flex gap-8 sm:flex-row">
             <ul class="list-none custom-list text-gray-600">
               <li> Order </li>
               <li> variety of food</li>
@@ -77,18 +77,18 @@ const section3 = () => {
               and order food{" "}
             </span>
           </h1>
-          <p className="block mt-8 break-words">
+          <p className="block mt-2 break-words">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
             voluptatum, voluptate, quibusdam, quia voluptas quod quos dolorum
-            voluptatibus quae quas fugit. <br></br>Quisquam voluptatum, voluptate,
+            voluptatibus quae quas fugit. Quisquam voluptatum, voluptate,
           </p>
           <br></br>
           <p>
-            Lorem ipsum dolor sit amet consectetur<br></br> adipisicing elit. Quisquam
-            voluptatum, voluptate, quibusdam, quia<br></br> voluptas quod quos dolorum
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            voluptatum, voluptate, quibusdam, quia voluptas quod quos dolorum
           </p>
           <br></br>
-          <ul class="flex gap-10 sm:flex-row">
+          <ul class="flex gap-8 sm:flex-row">
             <ul class="list-none custom-list text-gray-600">
               <li> Order </li>
               <li> variety of food</li>

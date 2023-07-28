@@ -13,7 +13,7 @@ const section1 = () => {
       style={{ width: "100vw", height: "100%" }}
       className="bg-yellow-500 justify-center items-center "
     >
-      <div className="flex md:flex-1/2 gap-6 justify-center mb-10">
+      <div className="flex md:flex-1/2 gap-4 justify-center mb-10">
         <motion.div animate={{ rotate: [0, 360, 360, 0] }}>
           <Image src={icon1} className="w-10 h-10 pop-out-image" />
         </motion.div>
@@ -27,17 +27,20 @@ const section1 = () => {
         </motion.div>
       </div>
       <div className="justify-center items-center flex flex-col mb-10">
+      <div className="rounded-full overflow-hidden" style={{ width: "250px", height: "250px" }}>
         <Image
           src="/images/chef.jpg"
           width={200}
-          height={150}
-          className="rounded-full"
+          height={200}
+          layout="responsive"
+          objectFit="cover"
+          objectPosition="center"
         />
-        <p className="text-center font-bold text-gray-500 underline">
-          {" "}
-          Buy Recipes
-        </p>
       </div>
+      <p className="text-center text-gray-500 border rounded-full mt-3">
+        Chef Diana from Dinner
+      </p>
+    </div>
       <div
         className="flex flex-wrap justify-center gap-4
   w-full 
