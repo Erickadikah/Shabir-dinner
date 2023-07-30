@@ -9,7 +9,7 @@ const section2 = () => {
   return (
     <section
       style={{ width: "100vw", height: "100%", background: "#E9F8F5" }}
-      className=" items-center mt-20 sm:block px-10"
+      className=" items-center  sm:block px-10"
     >
       <div className="flex flex-wrap justify-center items-center gap-2">
         <div className="flex justify-center  py-8">
@@ -63,39 +63,14 @@ const section2 = () => {
         <div className="rounded-full w-40 h-10 bg-customYellow flex justify-center items-center hover:bg-yellow-500">
           <p>Grill</p>
         </div>
-      </div>
-     {/* <div className="image-container mb-10 gap-3 flex md:flex-1/2 justify-center items-center flex-wrap">
-        <Image
-          src="/images/grill2.jpg"
-          className="rounded-md"
-          width={200}
-          height={100}
-        />
-        <Image
-          src="/images/grill2.jpg"
-          className="rounded-md"
-          width={200}
-          height={100}
-        />
-        <Image
-          src="/images/grill2.jpg"
-          className="rounded-md"
-          width={200}
-          height={100}
-        />
-        <Image
-          src="/images/grill2.jpg"
-          className="rounded-md"
-          width={200}
-          height={100}
-        />
+{/*       <div className="flex justify-center align-center items-center">
+      <div className=" h-45 w-80 border-box border">
+        <p>
+        Our menu
+        </p>
+        </div>
   </div>*/}
-      {/*<div class="grid flex-wrap grid-cols-4 gap-4">
-  <div class="bg-blue-300">Column 1</div>
-  <div class="bg-green-300">Column 2</div>
-  <div class="bg-red-300">Column 3</div>
-  <div class="bg-yellow-300">Column 4</div>
-  </div>*/}
+        </div>
     </section>
   );
 };

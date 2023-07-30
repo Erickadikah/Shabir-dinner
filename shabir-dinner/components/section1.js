@@ -10,8 +10,8 @@ const section1 = () => {
   const [move, setMove] = useState(false);
   return (
     <section
-      style={{ width: "100vw", height: "100%" }}
-      className="bg-yellow-500 justify-center items-center "
+      style={{ width: "100vw", height: "100%", backgroundImage: "url('/images/background.jpg')" }}
+      className="justify-center items-center bg-cover bg-center"
     >
       <div className="flex md:flex-1/2 gap-4 justify-center mb-10">
         <motion.div animate={{ rotate: [0, 360, 360, 0] }}>
