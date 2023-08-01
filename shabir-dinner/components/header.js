@@ -17,7 +17,7 @@ const header = () => {
         </div>
         <div className="shrink w-80 sm:order-2 flex gap-5">
         <motion.div>
-        <Image src={logo} className=' w-10 h-10'/>
+        <Image src={logo}alt="pic" className=' w-10 h-10'/>
         </motion.div>
           <h1 className="text-2xl font-bold">Dinner</h1>
         </div>

@@ -7,7 +7,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 const section1 = () => {
-  const [move, setMove] = useState(false);
+  // const [move, setMove] = useState(false);
   return (
     <section
       style={{ width: "100vw", height: "100%", backgroundImage: "url('/images/background.jpg')" }}
@@ -15,20 +15,21 @@ const section1 = () => {
     >
       <div className="flex md:flex-1/2 gap-4 justify-center mb-10">
         <motion.div animate={{ rotate: [0, 360, 360, 0] }}>
-          <Image src={icon1} className="w-10 h-10 pop-out-image" />
+          <Image src={icon1} alt="section1" className="w-10 h-10 pop-out-image" />
         </motion.div>
         <motion.div
           animate={{ rotate: [0, 360, 360, 0] }}
         >
-          <Image src={icon2} className="w-10 h-10 pop-out-image" />
+          <Image src={icon2} alt="section1" className="w-10 h-10 pop-out-image" />
         </motion.div>
         <motion.div animate={{ rotate: [0, 360, 360, 0] }}>
-          <Image src={icon3} className="w-10 h-10 pop-out-image" />
+          <Image src={icon3} alt="section1" className="w-10 h-10 pop-out-image" />
         </motion.div>
       </div>
       <div className="justify-center items-center flex flex-col mb-10">
       <div className="rounded-full overflow-hidden" style={{ width: "250px", height: "250px" }}>
         <Image
+        alt="section1"
           src="/images/chef.jpg"
           width={200}
           height={200}
@@ -58,6 +59,7 @@ const section1 = () => {
     rounded-sm transition-all"
         >
           <Image
+          alt="section1"
             src="/images/image4.jpg"
             width={200}
             height={200}
@@ -70,6 +72,7 @@ const section1 = () => {
         </div>
         <div className="pop-out-image flex flex-col items-center rounded-sm transition-all duration-300 w-full sm:w-1/2 md:w-1/4 lg:w-1/5">
           <Image
+          alt="section1"
             src="/images/image1.jpg"
             width={200}
             height={200}
@@ -82,6 +85,7 @@ const section1 = () => {
 
         <div className="pop-out-image flex flex-col items-center rounded-sm transition-all duration-300 w-full sm:w-1/2 md:w-1/4 lg:w-1/5">
           <Image
+          alt="section1"
             src="/images/image2.jpg"
             width={200}
             height={200}
@@ -94,6 +98,7 @@ const section1 = () => {
 
         <div className="pop-out-image flex flex-col items-center rounded-sm transition-all duration-300 w-full sm:w-1/2 md:w-1/4 lg:w-1/5">
           <Image
+          alt="section1"
             src="/images/image2.jpg"
             width={200}
             height={100}
