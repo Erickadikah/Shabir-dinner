@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 
 const header = () => {
   return (
-<header className="bg-yellow-500 w-full object-cover fixed top-0 z-50">
+<header className="bg-yellow-500 w-full h-30 object-cover fixed top-0 z-40">
       <div className="xl:container xl:mx-auto flex flex-col items-center sm:flex-row sm:justify-between text-center py-3">
         <div className="md:flex-none w-96 order-2 sm:order-1 justify-center py-4 sm:py-0">
           <input type="text" className="input-text" placeholder="Search.." />
