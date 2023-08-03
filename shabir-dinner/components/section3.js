@@ -1,15 +1,37 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaHandsHoldingCircle } from "react-icons/fa";
 import { GiForkKnifeSpoon } from "react-icons/gi";
 import { IoFastFoodSharp } from "react-icons/io5";
 import { PiHamburgerBold } from "react-icons/pi";
 import { BsReceipt } from "react-icons/bs";
+import { motion, useAnimation } from "framer-motion";
 
 const Section3 = () => {
-  const imageVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1 }, // Later state: visible and original scale
+  const firstSectionControls = useAnimation();
+  const secondSectionControls = useAnimation();
+  const thirdSectionControls = useAnimation();
+
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+
+    if (scrollY >= 100) {
+      firstSectionControls.start({ opacity: 1, y: 0 });
+    }
+
+    if (scrollY >= 400) {
+      secondSectionControls.start({ opacity: 2, y: 0 });
+    }
+
+    if (scrollY >= 800) {
+      thirdSectionControls.start({ opacity: 3, y: 0 });
+    }
   };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [firstSectionControls, secondSectionControls, thirdSectionControls]);
+
   return (
     <section
       style={{ width: "100vw", height: "100%", background: "#000000" }}
@@ -17,7 +39,11 @@ const Section3 = () => {
     >
       {/* First Section */}
       <div className="block mb-20 justify-center items-center bg-gray-700 md:w-120 md:h-70 lg:h-90">
-        <div className="px-8 justify-center items-center">
+        <motion.div
+        initial={{ y: -10, opacity: 0 }}
+          animate={firstSectionControls}
+          transition={{ duration: 0.5 }}
+        className="px-8 justify-center items-center">
           <h1 className="text-xl font-bold text-center mt-10"> ABOUT US</h1>
           <h2 className="lg:text-2xl font-extrabold text-center sm:text-sm">
             Welcome to Dinner{" "}
@@ -46,10 +72,14 @@ const Section3 = () => {
               <p className="text-lg text-white">Talk to Us</p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       {/* Second Section */}
-      <div className="block md:flex mt-20 justify-center items-center w-120 h-70">
+      <motion.div
+      initial={{ y: -10, opacity: 0 }}
+      animate={secondSectionControls}
+      transition={{ duration: 0.8, delay: 0.5 }}
+       className="block md:flex mt-20 justify-center items-center w-120 h-70">
         <div className="flex-1 px-6 border mb-6 hover:border-yellow-500">
           <h2 className="text-3xl font-extrabold text-center text-white mt-6">
             Explore the World of Food with Us
@@ -82,9 +112,13 @@ const Section3 = () => {
             {/* Add your subscription form here */}
           </div>
         </div>
-      </div>
+      </motion.div>
       {/* Third Section */}
-      <div className="block items-center justify-center px-6 border mb-6 w-120 h-70 hover:border-yellow-500">
+      <motion.div 
+      initial={{ y: -10, opacity: 0 }}
+      animate={thirdSectionControls}
+      transition={{ duration: 1, delay: 0.10 }}
+      className="block items-center justify-center px-6 border mb-6 w-120 h-70 hover:border-yellow-500">
         <div className="flex justify-center items-center mt-10">
           <BsReceipt size={35} className="text-white items-center" />
         </div>
@@ -105,7 +139,7 @@ const Section3 = () => {
         Sign Up
       </button>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

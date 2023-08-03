@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { motion } from 'framer-motion'
 
 const section4 = () => {
   return (
@@ -12,8 +13,12 @@ const section4 = () => {
         and we are always happy to hear from you
     </p>
   </h1>
-  <div className='flex justify-center items-center mt-40'>
-  <div className='w-100 h-220 border bg-white flex flex-wrap items-center justify-center p-4 rounded-lg'>
+  <motion.div
+  initial={{ y: -10, opacity: 0}}
+  animate={{ y : 0, opacity: 1}}
+  transition={{ duration: 0.8, delay: 0.10}}
+   className='flex justify-center items-center mt-40'>
+  <div className='w-100 h-200 border bg-white flex flex-wrap items-center justify-center p-8 rounded-lg'>
     <input
       type='text'
       placeholder='Enter your name'
@@ -39,7 +44,7 @@ const section4 = () => {
       Submit
     </button>
   </div>
-  </div>
+  </motion.div>
 </div>
   );
 }

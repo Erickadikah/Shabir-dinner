@@ -1,32 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import photo from "../public/images/chef.svg";
 import { GiForkKnifeSpoon } from "react-icons/gi";
 import { IoFastFoodSharp } from "react-icons/io5";
 import { PiHamburgerBold } from "react-icons/pi";
+import { motion, AnimatePresence } from 'framer-motion';
 
 const section2 = () => {
+  const [selectedId, setSelectedId] = useState(null)
+
+  const items = [
+    { id: 'forkKnife', title: 'Fork & Knife', subtitle: 'Subtitle 1' },
+    { id: 'fastFood', title: 'Fast Food', subtitle: 'Subtitle 2' },
+    { id: 'hamburger', title: 'Hamburger', subtitle: 'Subtitle 3' },
+  ];
+
   return (
     <section
       style={{ width: "100vw", height: "100%", background: "#E9F8F5" }}
-      className=" items-center  sm:block px-10"
+      className="items-center sm:block px-10"
     >
       <div className="flex flex-wrap justify-center items-center gap-2">
-        <div className="flex justify-center  py-8">
-          <div className="rounded-full shadow-lg p-8">
-            <GiForkKnifeSpoon size={35} />
-          </div>
-        </div>
-        <div className="flex justify-center  py-8">
-          <div className="rounded-full shadow-lg p-8">
-            <IoFastFoodSharp size={35} />
-          </div>
-        </div>
-        <div className="flex justify-center  py-8">
-          <div className="rounded-full shadow-lg p-8">
-            <PiHamburgerBold size={35} />
-          </div>
-        </div>
+        {items.map(item => (
+          <motion.div layoutId={item.id} onClick={() => setSelectedId(item.id)} key={item.id}>
+            <div className="rounded-full shadow-lg p-8">
+              {item.id === 'forkKnife' && <GiForkKnifeSpoon size={35} />}
+              {item.id === 'fastFood' && <IoFastFoodSharp size={35} />}
+              {item.id === 'hamburger' && <PiHamburgerBold size={35} />}
+            </div>
+          </motion.div>
+        ))}
       </div>
       <h1 className="text-center font-extrabold text-3xl">
         {" "}
@@ -63,14 +66,16 @@ const section2 = () => {
         <div className="rounded-full w-40 h-10 bg-customYellow flex justify-center items-center hover:bg-yellow-500">
           <p>Grill</p>
         </div>
-{/*       <div className="flex justify-center align-center items-center">
-      <div className=" h-45 w-80 border-box border">
-        <p>
-        Our menu
-        </p>
         </div>
-  </div>*/}
-        </div>
+        <AnimatePresence>
+        {selectedId && (
+          <motion.div layoutId={selectedId}>
+            <motion.h5>{items.find(item => item.id === selectedId)?.subtitle}</motion.h5>
+            <motion.h2>{items.find(item => item.id === selectedId)?.title}</motion.h2>
+            <motion.button onClick={() => setSelectedId(null)}>Close</motion.button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

@@ -10,7 +10,7 @@ const section1 = () => {
     <section
       style={{
         width: "100vw",
-        height: "100%",
+        height: "90vh",
         backgroundImage: "url('/images/background.jpg')",
       }}
       className="justify-center items-center bg-cover w-full bg-center"
@@ -53,9 +53,6 @@ const section1 = () => {
             objectPosition="center"
           />
         </div>
-        <p className="text-center text-gray-500 border rounded-full mt-3">
-          Chef Diana from Dinner
-        </p>
       </div>
       <div
         className="flex flex-wrap justify-center gap-4
@@ -123,6 +120,10 @@ const section1 = () => {
             Recipes
           </p>
 </div>*/}
+  <h3 className=" text-teal-500 text-center text-xl">At TasteBuds Bistro, we believe that food is an art that should ignite your taste buds and leave lasting memories. Our culinary journey began in 2005 when our founder, Chef Emily, turned her passion for crafting exquisite dishes into a reality.
+  <br></br> With a vision to create a haven for food lovers, TasteBuds Bistro was born.
+Experience a fusion of flavors that celebrate both local traditions and global influences. 
+<br></br>Our carefully curated menu showcases a diverse range of dishes, from classic favorites to innovative creations.</h3>
       </div>
     </section>
   );
