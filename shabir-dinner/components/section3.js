@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 import { FaHandsHoldingCircle } from "react-icons/fa";
 import { GiForkKnifeSpoon } from "react-icons/gi";
 import { IoFastFoodSharp } from "react-icons/io5";
@@ -11,7 +11,7 @@ const Section3 = () => {
   const secondSectionControls = useAnimation();
   const thirdSectionControls = useAnimation();
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const scrollY = window.scrollY;
 
     if (scrollY >= 100) {
@@ -25,12 +25,12 @@ const Section3 = () => {
     if (scrollY >= 800) {
       thirdSectionControls.start({ opacity: 3, y: 0 });
     }
-  };
+  }, [firstSectionControls, secondSectionControls, thirdSectionControls]);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [firstSectionControls, secondSectionControls, thirdSectionControls]);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
 
   return (
     <section
@@ -40,10 +40,11 @@ const Section3 = () => {
       {/* First Section */}
       <div className="block mb-20 justify-center items-center bg-gray-700 md:w-120 md:h-70 lg:h-90">
         <motion.div
-        initial={{ y: -10, opacity: 0 }}
+          initial={{ y: -10, opacity: 0 }}
           animate={firstSectionControls}
           transition={{ duration: 0.5 }}
-        className="px-8 justify-center items-center">
+          className="px-8 justify-center items-center"
+        >
           <h1 className="text-xl font-bold text-center mt-10"> ABOUT US</h1>
           <h2 className="lg:text-2xl font-extrabold text-center sm:text-sm">
             Welcome to Dinner{" "}
@@ -76,10 +77,11 @@ const Section3 = () => {
       </div>
       {/* Second Section */}
       <motion.div
-      initial={{ y: -10, opacity: 0 }}
-      animate={secondSectionControls}
-      transition={{ duration: 0.8, delay: 0.5 }}
-       className="block md:flex mt-20 justify-center items-center w-120 h-70">
+        initial={{ y: -10, opacity: 0 }}
+        animate={secondSectionControls}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="block md:flex mt-20 justify-center items-center w-120 h-70"
+      >
         <div className="flex-1 px-6 border mb-6 hover:border-yellow-500">
           <h2 className="text-3xl font-extrabold text-center text-white mt-6">
             Explore the World of Food with Us
@@ -98,8 +100,8 @@ const Section3 = () => {
           <p className="text-center text-white">
             Our team of dedicated writers brings you the latest trends, unique
             cuisines, and expert tips to elevate your dining experiences.
-            Whether you're a home cook or a seasoned chef, we have something
-            special for you.
+            Whether you&apos;re a home cook or a seasoned chef, we have
+            something special for you.
           </p>
           <br />
           <div className="flex justify-center items-center">
@@ -114,11 +116,12 @@ const Section3 = () => {
         </div>
       </motion.div>
       {/* Third Section */}
-      <motion.div 
-      initial={{ y: -10, opacity: 0 }}
-      animate={thirdSectionControls}
-      transition={{ duration: 1, delay: 0.10 }}
-      className="block items-center justify-center px-6 border mb-6 w-120 h-70 hover:border-yellow-500">
+      <motion.div
+        initial={{ y: -10, opacity: 0 }}
+        animate={thirdSectionControls}
+        transition={{ duration: 1, delay: 0.1 }}
+        className="block items-center justify-center px-6 border mb-6 w-120 h-70 hover:border-yellow-500"
+      >
         <div className="flex justify-center items-center mt-10">
           <BsReceipt size={35} className="text-white items-center" />
         </div>
@@ -133,11 +136,11 @@ const Section3 = () => {
           voluptatum, voluptate, quibusdam, quia voluptas quod quos dolorum
           voluptatibus quae quas fugit. Quisquam voluptatum, voluptate,
         </p>
-        <br></br>
+        <br />
         <div className="flex justify-center items-center">
-        <button className='w-40 h-10 bg-yellow-500 text-white font-bold rounded-full mb-4'>
-        Sign Up
-      </button>
+          <button className="w-40 h-10 bg-yellow-500 text-white font-bold rounded-full mb-4">
+            Sign Up
+          </button>
         </div>
       </motion.div>
     </section>

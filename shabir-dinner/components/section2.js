@@ -6,7 +6,7 @@ import { IoFastFoodSharp } from "react-icons/io5";
 import { PiHamburgerBold } from "react-icons/pi";
 import { motion, AnimatePresence } from 'framer-motion';
 
-const section2 = () => {
+const Section2 = () => {
   const [selectedId, setSelectedId] = useState(null)
 
   const items = [
@@ -80,4 +80,4 @@ const section2 = () => {
   );
 };
 
-export default section2;
+export default Section2;
