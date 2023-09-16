@@ -3,48 +3,73 @@ import { motion } from 'framer-motion'
 
 const section4 = () => {
   return (
-    <div className='justify-center items-center w-screen h-screen' style={{ backgroundColor: '#014451', justifyContent: 'center', alignItems: 'center'}}>
+    <div className='justify-center items-center w-screen h-screen' style={{ backgroundColor: '#014451'}}>
   <h1 className='text-center font-extrabold text-3xl text-white mt-10'>
     Our Customers are Our Top Priority
     <br></br>
-    <p className='text-sm'>
-        We are here to serve you with the best food and service possible
-        sent to your doorstep
-        and we are always happy to hear from you
+    <p className='text-lg'>
+        We are here to serve you !
     </p>
   </h1>
-  <motion.div
-  initial={{ y: -10, opacity: 0}}
-  animate={{ y : 0, opacity: 1}}
-  transition={{ duration: 0.8, delay: 0.10}}
-   className='flex justify-center items-center mt-40'>
-  <div className='w-100 h-200 border bg-white flex flex-wrap items-center justify-center p-8 rounded-lg'>
-    <input
-      type='text'
-      placeholder='Enter your name'
-      className='w-full h-10 border rounded-lg border-gray-300 mb-2 p-2'
-    />
-    <input
-      type='text'
-      placeholder='Enter your email'
-      className='w-full h-10 border rounded-lg border-gray-300 mb-2 p-2'
-    />
-    <input
-        type='text'
-        placeholder='Enter your phone number'
-        className='w-full h-10 rounded-lg border border-gray-300 mb-2 p-2'
+    <motion.div
+  initial={{ y: -10, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ duration: 0.8, delay: 0.10 }}
+  className="flex justify-center items-center lg:mt-10"
+>
+  <div className="w-full max-w-md p-4 bg-white shadow-lg">
+    <h2 className="text-2xl justify-center align-center text-center  font-semibold mb-4">Contact Us</h2>
+    <form>
+      <div className="mb-4">
+        <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+          Name
+        </label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter your name"
+          className="w-full h-10 px-4 py-2 border rounded-lg border-gray-300 focus:ring focus:ring-yellow-500"
         />
-    <p className='flex-start'>Your address</p>
-    <input
-        type='text'
-        placeholder=''
-        className='w-full h-40 rounded-lg border border-gray-300 mb-2 p-2'
+      </div>
+      <div className="mb-4">
+        <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+          Email
+        </label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          className="w-full h-10 px-4 py-2 border rounded-lg border-gray-300 focus:ring focus:ring-yellow-500"
         />
-    <button className='w-40 h-10 bg-yellow-500 text-white font-bold rounded-full'>
-      Submit
-    </button>
+      </div>
+      <div className="mb-4">
+        <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+          Phone Number
+        </label>
+        <input
+          type="tel"
+          id="phone"
+          placeholder="Enter your phone number"
+          className="w-full h-10 px-4 py-2 border rounded-lg border-gray-300 focus:ring focus:ring-yellow-500"
+        />
+      </div>
+      <div className="mb-4">
+        <label htmlFor="address" className="block text-sm font-medium text-gray-700">
+          Address
+        </label>
+        <textarea
+          id="address"
+          placeholder="Enter your address"
+          rows="4"
+          className="w-full px-4 py-2 border rounded-lg border-gray-300 focus:ring focus:ring-yellow-500"
+        ></textarea>
+      </div>
+      <button className="w-full h-10 bg-yellow-500 text-white font-semibold rounded-full hover:bg-yellow-600 transition duration-300">
+        Submit
+      </button>
+    </form>
   </div>
-  </motion.div>
+</motion.div>
 </div>
   );
 }
