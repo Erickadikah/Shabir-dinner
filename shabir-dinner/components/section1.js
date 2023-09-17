@@ -1,8 +1,5 @@
 import React from "react";
 import Image from "next/image";
-// import icon1 from "../public/images/Cook.svg";
-// import icon2 from "../public/images/recipe.svg";
-// import icon3 from "../public/images/oder.svg";
 import { motion } from "framer-motion";
 
 const Section1 = () => {
@@ -10,7 +7,7 @@ const Section1 = () => {
     backgroundImage: `linear-gradient(rgba(26, 25, 25, 0.8), rgba(21, 21, 21, 0.8)), url('/images/background.jpg')`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-    minHeight: "100vh",
+    minHeight: "90vh",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -37,30 +34,29 @@ const Section1 = () => {
   };
 
   const listStyle = {
-  listStyleType: "none",
-  textAlign: "left",
-  fontSize: "1.2rem",
-  paddingLeft: "1rem", // Add left padding for the list items
-};
+    listStyleType: "none",
+    textAlign: "left",
+    fontSize: "1.2rem",
+    paddingLeft: "1rem",
+  };
 
-const listItemStyle = {
-  position: "relative",
-  marginBottom: "1rem",
-  paddingLeft: "1.5rem", // Add left padding for the list items
-};
+  const listItemStyle = {
+    position: "relative",
+    marginBottom: "1rem",
+    paddingLeft: "1.5rem",
+  };
 
-const arrowStyle = {
-  position: "absolute",
-  left: "0.5rem", // Adjust the left position of the arrow
-  top: "0.25rem", // Adjust the top position of the arrow
-  content: "''",
-  display: "inline-block",
-  width: "0.5rem", // Adjust the width of the arrow
-  height: "0.5rem", // Adjust the height of the arrow
-  background: "#FFD700", // Arrow color
-  clipPath: "polygon(100% 0%, 0% 50%, 100% 100%)", // Create an arrow shape
-};
-
+  const arrowStyle = {
+    position: "absolute",
+    left: "0.5rem",
+    top: "0.25rem",
+    content: "''",
+    display: "inline-block",
+    width: "0.8rem",
+    height: "0.8rem",
+    background: "#FFD700",
+    clipPath: "polygon(100% 0%, 0% 50%, 100% 100%)",
+  };
 
   return (
     <section style={sectionStyle}>
@@ -75,25 +71,25 @@ const arrowStyle = {
           objectPosition="center"
         />
       </div>
-      {/*<p>
-        At shabir Dinner we believe that good food is not only about taste, but
-        also about the stories behind it. We are passionate about connecting
-        people with the best local restaurants around them.
-  </p>*/}
+      <h1 className="text-3xl font-extrabold mb-4">
+        Indulge your senses in a world of mouthwatering flavors, culinary inspiration, and gastronomic adventures at Shabir Dinner.
+      </h1>
+      <p className="text-lg mb-4">
+        At Shabir Dinner, we believe that good food is not only about taste but also about the stories behind it. We are passionate about connecting people with the best local restaurants around them.
+      </p>
       <ul style={listStyle}>
-  <li style={listItemStyle}>
-    <span style={arrowStyle}></span> Order your favorite food
-  </li>
-  <li style={listItemStyle}>
-    <span style={arrowStyle}></span> Discover new recipes
-  </li>
-  <li style={listItemStyle}>
-    <span style={arrowStyle}></span> Enjoy fast and convenient delivery
-  </li>
-</ul>
+        <li style={listItemStyle}>
+          <span style={arrowStyle}></span> Order your favorite food
+        </li>
+        <li style={listItemStyle}>
+          <span style={arrowStyle}></span> Discover new recipes
+        </li>
+        <li style={listItemStyle}>
+          <span style={arrowStyle}></span> Enjoy fast and convenient delivery
+        </li>
+      </ul>
     </section>
   );
 };
 
 export default Section1;
-

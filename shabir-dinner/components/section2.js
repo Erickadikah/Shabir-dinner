@@ -7,6 +7,8 @@ import { PiHamburgerBold } from "react-icons/pi";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import chefImage from "../public/images/chicken1.jpg"
+import pizza from "../public/images/pizza.jpg"
+
 
 const Section2 = () => {
   const [selectedId, setSelectedId] = useState(null);
@@ -28,7 +30,7 @@ const Section2 = () => {
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.\
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      images: [chefImage, chefImage, chefImage],
+      images: [chefImage, chefImage],
     },
     {
       id: "hamburger",
@@ -76,12 +78,13 @@ const Section2 = () => {
               <motion.h2 className="text-2xl mb-4">
                 {items.find((item) => item.id === selectedId)?.title}
               </motion.h2>
+              <div className="flex justify-center items-center gap-4 mb-4">
                 <Carousel
+                  autoPlay={true}
                   showArrows={true}
                   showThumbs={false}
-                  // width={500}
-                  // height={250}
-                  // className="justify-center items-center"
+                  // width={300}
+                  // height={200}
                 >
                   {items
                     .find((item) => item.id === selectedId)
@@ -97,6 +100,7 @@ const Section2 = () => {
                       </div>
                     ))}
                 </Carousel>
+              </div>
               <motion.p className="mb-4">
                 {items.find((item) => item.id === selectedId)?.content}
               </motion.p>
