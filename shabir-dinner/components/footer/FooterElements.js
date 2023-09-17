@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Link from 'next/link'
 
 export const FooterContainer = styled.footer`
-    background-color: #EAB308;
+    background-color: rgb(17,24,39);
 `
 
 export const FooterWrap = styled.div`

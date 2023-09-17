@@ -3,8 +3,8 @@ import { motion } from 'framer-motion'
 
 const section4 = () => {
   return (
-    <div className='justify-center items-center w-screen h-screen' style={{ backgroundColor: '#014451'}}>
-  <h1 className='text-center font-extrabold text-3xl text-white mt-10'>
+    <div className='justify-center items-center w-screen h-screen' style={{ backgroundColor: 'rgb(233,248,245)'}}>
+  <h1 className='text-center font-extrabold text-3xl text-black mt-10'>
     Our Customers are Our Top Priority
     <br></br>
     <p className='text-lg'>
@@ -19,7 +19,7 @@ const section4 = () => {
 >
   <div className="w-full max-w-md p-4 bg-white shadow-lg">
     <h2 className="text-2xl justify-center align-center text-center  font-semibold mb-4">Contact Us</h2>
-    <form>
+    <form className='h-200 w-400'>
       <div className="mb-4">
         <label htmlFor="name" className="block text-sm font-medium text-gray-700">
           Name
@@ -64,7 +64,7 @@ const section4 = () => {
           className="w-full px-4 py-2 border rounded-lg border-gray-300 focus:ring focus:ring-yellow-500"
         ></textarea>
       </div>
-      <button className="w-full h-10 bg-yellow-500 text-white font-semibold rounded-full hover:bg-yellow-600 transition duration-300">
+      <button className="w-full h-10 bg-[rgb(1,160,131)] text-white font-semibold rounded-full hover:bg-yellow-600 transition duration-300">
         Submit
       </button>
     </form>

@@ -71,12 +71,14 @@ const Section1 = () => {
           objectPosition="center"
         />
       </div>
-      <h1 className="text-3xl font-extrabold mb-4">
+      <div className="p-10">
+      <h1 className="text-3xl font-extrabold">
         Indulge your senses in a world of mouthwatering flavors, culinary inspiration, and gastronomic adventures at Shabir Dinner.
       </h1>
       <p className="text-lg mb-4">
         At Shabir Dinner, we believe that good food is not only about taste but also about the stories behind it. We are passionate about connecting people with the best local restaurants around them.
       </p>
+      </div>
       <ul style={listStyle}>
         <li style={listItemStyle}>
           <span style={arrowStyle}></span> Order your favorite food
@@ -88,6 +90,9 @@ const Section1 = () => {
           <span style={arrowStyle}></span> Enjoy fast and convenient delivery
         </li>
       </ul>
+      <button className="hover:bg-yellow-600 text-white border border-yellow-500 font-bold py-2 px-4 rounded-sm w-60">
+  Order Now
+</button>
     </section>
   );
 };

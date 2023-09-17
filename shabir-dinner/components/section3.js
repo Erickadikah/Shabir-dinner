@@ -5,7 +5,6 @@ import { IoFastFoodSharp } from "react-icons/io5";
 import { PiHamburgerBold } from "react-icons/pi";
 import { BsReceipt } from "react-icons/bs";
 import { motion, useAnimation } from "framer-motion";
-// import { Button } from ""
 
 const Section3 = () => {
   const firstSectionControls = useAnimation();
@@ -34,12 +33,8 @@ const Section3 = () => {
   }, [handleScroll]);
 
   return (
-    <section
-      id="section3"
-      className="bg-black flex flex-col sm:flex-row justify-center items-center py-8 sm:space-x-4 sm:space-y-8 sm:gap-4 sm:flex"
-    >
+    <section className="bg-yellow-500 flex flex-col sm:flex-row justify-center items-center py-8 space-x-4 space-y-8 gap-4">
       {/* First Section */}
-
       <motion.div
         initial={{ y: -10, opacity: 0 }}
         animate={secondSectionControls}
@@ -58,37 +53,36 @@ const Section3 = () => {
         <p className="mt-4 text-gray-800">
           Our team of dedicated writers brings you the latest trends, unique
           cuisines, and expert tips to elevate your dining experiences. Whether
-          you're a home cook or a seasoned chef, we have something special for
-          you.
+          you&apos;re a home cook or a seasoned chef, we have something special
+          for you.
         </p>
         <div className="mt-6 flex justify-center">
-          <div className="button-primary">
-            <p className="text-lg text-white">Read More</p>
-          </div>
+          <button className="button-primary">Read More</button>
         </div>
       </motion.div>
-      <div className="bg-gray-700 rounded-sm text-white p-8 sm:w-full sm:h-auto md:w-96 md:h-70 lg:h-90">
+
+      {/* Second Section */}
+      <div className="bg-gray-700 rounded-sm text-white p-8 w-full sm:w-96 sm:h-70 md:w-96 md:h-90 lg:h-90">
         <motion.div
           initial={{ y: -10, opacity: 0 }}
           animate={firstSectionControls}
           transition={{ duration: 0.5 }}
-          className=""
         >
-          <h1 className="text-2xl font-bold mt-4 sm:mt-8"> ABOUT US</h1>
+          <h1 className="text-2xl font-bold mt-4 sm:mt-8">ABOUT US</h1>
           <h2 className="text-lg font-semibold mt-2">
             Welcome to Dinner{" "}
             <span className="text-yellow-500">
               the best place to find recipes for and order food
             </span>
           </h2>
-          <p className="mt-4">
+          <p className="mt-4 text-gray-300">
             At TasteBuds Bistro, we believe that food is an art that should
             ignite your taste buds and leave lasting memories. Our culinary
             journey began in 2005 when our founder, Chef Emily, turned her
             passion for crafting exquisite dishes into a reality. With a vision
             to create a haven for food lovers, TasteBuds Bistro was born.
           </p>
-          <p className="mt-4">
+          <p className="mt-4 text-gray-300">
             Experience a fusion of flavors that celebrate both local traditions
             and global influences. Our carefully curated menu showcases a
             diverse range of dishes, from classic favorites to innovative
@@ -99,6 +93,7 @@ const Section3 = () => {
           </div>
         </motion.div>
       </div>
+
       {/* Third Section */}
       <motion.div
         initial={{ y: -10, opacity: 0 }}
@@ -110,21 +105,19 @@ const Section3 = () => {
           <BsReceipt size={35} className="text-gray-800" />
         </div>
         <h2 className="text-2xl font-bold text-center text-yellow-500 mt-4">
-            The best place to find recipes for and order food
+          The Best Place to Find Recipes for and Order Food
         </h2>
         <p className="mt-4 text-gray-800">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           voluptatum, voluptate, quibusdam, quia voluptas quod quos dolorum
           voluptatibus quae quas fugit. Quisquam voluptatum, voluptate,
           quibusdam, quia voluptas quod quos dolorum voluptatibus quae quas
-          fugit.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          voluptatum, voluptate, quibusdam, quia voluptas quod quos dolorum
+          fugit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Quisquam voluptatum, voluptate, quibusdam, quia voluptas quod quos
+          dolorum
         </p>
         <div className="mt-6 flex justify-center">
-          <div className="button-primary">
-            <p className="text-lg text-white">Sign Up</p>
-          </div>
+          <button className="button-primary">Sign Up</button>
         </div>
       </motion.div>
     </section>
