@@ -1,128 +1,99 @@
 import React from "react";
 import Image from "next/image";
-import icon1 from "../public/images/Cook.svg";
-import icon2 from "../public/images/recipe.svg";
-import icon3 from "../public/images/oder.svg";
+// import icon1 from "../public/images/Cook.svg";
+// import icon2 from "../public/images/recipe.svg";
+// import icon3 from "../public/images/oder.svg";
 import { motion } from "framer-motion";
 
-const section1 = () => {
+const Section1 = () => {
+  const sectionStyle = {
+    backgroundImage: `linear-gradient(rgba(26, 25, 25, 0.8), rgba(21, 21, 21, 0.8)), url('/images/background.jpg')`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    minHeight: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "2rem",
+    backgroundAttachment: "fixed",
+    backgroundRepeat: "no-repeat",
+    color: "#ffffff", // Text color
+    textAlign: "center",
+  };
+
+  const containerStyle = {
+    width: "250px",
+    height: "250px",
+    borderRadius: "50%",
+    overflow: "hidden",
+    marginBottom: "2rem",
+  };
+
+  const iconContainerStyle = {
+    display: "flex",
+    gap: "1rem",
+    marginBottom: "2rem",
+  };
+
+  const listStyle = {
+  listStyleType: "none",
+  textAlign: "left",
+  fontSize: "1.2rem",
+  paddingLeft: "1rem", // Add left padding for the list items
+};
+
+const listItemStyle = {
+  position: "relative",
+  marginBottom: "1rem",
+  paddingLeft: "1.5rem", // Add left padding for the list items
+};
+
+const arrowStyle = {
+  position: "absolute",
+  left: "0.5rem", // Adjust the left position of the arrow
+  top: "0.25rem", // Adjust the top position of the arrow
+  content: "''",
+  display: "inline-block",
+  width: "0.5rem", // Adjust the width of the arrow
+  height: "0.5rem", // Adjust the height of the arrow
+  background: "#FFD700", // Arrow color
+  clipPath: "polygon(100% 0%, 0% 50%, 100% 100%)", // Create an arrow shape
+};
+
+
   return (
-    <section
-      style={{
-        width: "100vw",
-        height: "90vh",
-        backgroundImage: "url('/images/background.jpg')",
-      }}
-      className="justify-center items-center bg-cover w-full bg-center"
-    >
-      <div className="flex md:flex-1/2 gap-4 justify-center mb-10">
-        <motion.div animate={{ rotate: [0, 360, 360, 0] }}>
-          <Image
-            src={icon1}
-            alt="section1"
-            className="w-10 h-10 pop-out-image"
-          />
-        </motion.div>
-        <motion.div animate={{ rotate: [0, 360, 360, 0] }}>
-          <Image
-            src={icon2}
-            alt="section1"
-            className="w-10 h-10 pop-out-image"
-          />
-        </motion.div>
-        <motion.div animate={{ rotate: [0, 360, 360, 0] }}>
-          <Image
-            src={icon3}
-            alt="section1"
-            className="w-10 h-10 pop-out-image"
-          />
-        </motion.div>
+    <section style={sectionStyle}>
+      <div style={containerStyle}>
+        <Image
+          alt="Chef"
+          src="/images/chef.jpg"
+          width={250}
+          height={250}
+          layout="responsive"
+          objectFit="cover"
+          objectPosition="center"
+        />
       </div>
-      <div className="justify-center items-center flex flex-col mt-20">
-        <div
-          className="rounded-full overflow-hidden"
-          style={{ width: "250px", height: "250px" }}
-        >
-          <Image
-            alt="section1"
-            src="/images/chef.jpg"
-            width={200}
-            height={200}
-            layout="responsive"
-            objectFit="cover"
-            objectPosition="center"
-          />
-        </div>
-      </div>
-      <div
-        className="flex flex-wrap justify-center gap-4
-        w-full 
-        md:flex-1/4
-        align-center
-        lg:gap-2
-        mb-20
-        "
-      >
-        {/*<div
-          className="
-          pop-out-image 
-          flex flex-col 
-          items-center 
-          rounded-sm transition-all"
-        >
-          <Image
-            alt="section1"
-            src="/images/image4.jpg"
-            width={200}
-            height={200}
-            className="rounded-lg"
-          />
-          <p className="text-center font-bold text-gray-500 underline">
-            {" "}
-            Buy Recipes
-          </p>
-    </div>*/}
-        {/*<div className="pop-out-image flex flex-col items-center rounded-sm transition-all duration-300 w-full sm:w-1/2 md:w-1/4 lg:w-1/5">
-          <Image
-            alt="section1"
-            src="/images/image1.jpg"
-            width={200}
-            height={200}
-            className="rounded-lg"
-          />
-          <p className="text-center font-bold text-gray-500 underline">
-            Book Session With Me
-          </p>
-  </div>*/}
-
-        {/*<div className="pop-out-image flex flex-col items-center rounded-sm transition-all duration-300 w-full sm:w-1/2 md:w-1/4 lg:w-1/5">
-          <Image
-            alt="section1"
-            src="/images/image2.jpg"
-            width={200}
-            height={200}
-            className="rounded-lg"
-          />
-          <p className="text-center font-bold text-gray-500 underline">
-            SubScribe to My Recipes Article
-          </p>
-</div>*/}
-
-        {/*<div className="pop-out-image flex flex-col items-center rounded-sm transition-all duration-300 w-full sm:w-1/2 md:w-1/4 lg:w-1/5">
-          <Image
-            alt="section1"
-            src="/images/image2.jpg"
-            width={200}
-            height={100}
-            className="rounded-lg"
-          />
-          <p className="text-center font-bold text-gray-500 underline">
-            Recipes
-          </p>
-</div>*/}
-      </div>
+      {/*<p>
+        At shabir Dinner we believe that good food is not only about taste, but
+        also about the stories behind it. We are passionate about connecting
+        people with the best local restaurants around them.
+  </p>*/}
+      <ul style={listStyle}>
+  <li style={listItemStyle}>
+    <span style={arrowStyle}></span> Order your favorite food
+  </li>
+  <li style={listItemStyle}>
+    <span style={arrowStyle}></span> Discover new recipes
+  </li>
+  <li style={listItemStyle}>
+    <span style={arrowStyle}></span> Enjoy fast and convenient delivery
+  </li>
+</ul>
     </section>
   );
 };
 
-export default section1;
+export default Section1;
+
