@@ -33,7 +33,7 @@ const Section3 = () => {
   }, [handleScroll]);
 
   return (
-    <section className="bg-yellow-500 flex flex-col sm:flex-row justify-center items-center py-8 space-x-4 space-y-8 gap-4">
+    <section className="bg-yellow-500 flex flex-col sm:flex-row justify-center items-center py-8 space-x-4 space-y-8 gap-4  border-b">
       {/* First Section */}
       <motion.div
         initial={{ y: -10, opacity: 0 }}
@@ -117,7 +117,7 @@ const Section3 = () => {
           dolorum
         </p>
         <div className="mt-6 flex justify-center">
-          <button className="button-primary">Sign Up</button>
+          <button className="button-primary">Subscribe</button>
         </div>
       </motion.div>
     </section>

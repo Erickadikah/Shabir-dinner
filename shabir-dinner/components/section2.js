@@ -4,6 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { GiForkKnifeSpoon } from "react-icons/gi";
 import { IoFastFoodSharp } from "react-icons/io5";
 import { PiHamburgerBold } from "react-icons/pi";
+import { GiFoodTruck } from "react-icons/gi";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import chefImage from "../public/images/chicken1.jpg"
@@ -41,10 +42,19 @@ const Section2 = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
       images: [chefImage, chefImage, chefImage],
     },
+    {
+      id: "foodTruck",
+      title: "Food Truck",
+      subtitle: "Subtitle 4",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.\
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      images: [chefImage, chefImage, chefImage],
+    }
   ];
 
   return (
-    <section className="bg-gray-100 py-16">
+    <section className="bg-gray-100 py-16  border-b">
       <div className="container mx-auto px-4">
         <h1 className="text-3xl font-extrabold text-center mb-8">
           Our Top Categories
@@ -61,6 +71,7 @@ const Section2 = () => {
                 {item.id === "forkKnife" && <GiForkKnifeSpoon size={35} />}
                 {item.id === "fastFood" && <IoFastFoodSharp size={35} />}
                 {item.id === "hamburger" && <PiHamburgerBold size={35} />}
+                {item.id === "foodTruck" && <GiFoodTruck size={35} />}
               </div>
             </motion.div>
           ))}

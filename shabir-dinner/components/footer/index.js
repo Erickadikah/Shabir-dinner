@@ -60,9 +60,6 @@ const Footer = () => {
         </FooterLinksContainer>
         <SocialMedia>
           <SocialMediaWrap>
-            {/* <SocialLogo>
-              Wallet
-            </SocialLogo> */}
             <WebsiteRights>
             Dinner © {new Date().getFullYear()} All rights reserved.
             </WebsiteRights>

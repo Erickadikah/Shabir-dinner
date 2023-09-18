@@ -7,7 +7,7 @@ const Section1 = () => {
     backgroundImage: `linear-gradient(rgba(26, 25, 25, 0.8), rgba(21, 21, 21, 0.8)), url('/images/background.jpg')`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-    minHeight: "90vh",
+    minHeight: "92vh",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -15,7 +15,7 @@ const Section1 = () => {
     padding: "2rem",
     backgroundAttachment: "fixed",
     backgroundRepeat: "no-repeat",
-    color: "#ffffff", // Text color
+    color: "#ffffff",
     textAlign: "center",
   };
 
@@ -28,34 +28,25 @@ const Section1 = () => {
   };
 
   const iconContainerStyle = {
-    display: "flex",
-    gap: "1rem",
-    marginBottom: "2rem",
-  };
-
-  const listStyle = {
     listStyleType: "none",
     textAlign: "left",
     fontSize: "1.2rem",
     paddingLeft: "1rem",
-  };
-
-  const listItemStyle = {
-    position: "relative",
-    marginBottom: "1rem",
-    paddingLeft: "1.5rem",
+    marginTop: "1rem", // Add margin to separate from the text
   };
 
   const arrowStyle = {
     position: "absolute",
-    left: "0.5rem",
-    top: "0.25rem",
+    left: "calc(100% - 1rem)", // Adjust the distance from the right edge
+    top: "50%",
+    transform: "translateY(-50%)", // Vertically center the arrow
     content: "''",
     display: "inline-block",
-    width: "0.8rem",
-    height: "0.8rem",
-    background: "#FFD700",
-    clipPath: "polygon(100% 0%, 0% 50%, 100% 100%)",
+    width: "0",
+    height: "0",
+    borderTop: "0.4rem solid transparent",
+    borderBottom: "0.4rem solid transparent",
+    borderLeft: "0.8rem solid #FFD700", // Adjust the color and size of the arrow
   };
 
   return (
@@ -71,30 +62,24 @@ const Section1 = () => {
           objectPosition="center"
         />
       </div>
-      <div className="p-10">
-      <h1 className="text-3xl font-extrabold">
-        Indulge your senses in a world of mouthwatering flavors, culinary inspiration, and gastronomic adventures at Shabir Dinner.
-      </h1>
-      <p className="text-lg mb-4">
-        At Shabir Dinner, we believe that good food is not only about taste but also about the stories behind it. We are passionate about connecting people with the best local restaurants around them.
-      </p>
+      <div className="sm:mb-3 lg:mb-10">
+        <h1 className="sm:text-2xl lg:text-4xl font-extrabold text-[rgb(165,243,252)] text-800 lg:p-8">
+          Indulge your senses in a world of mouthwatering flavors, culinary inspiration,
+          <br />
+          and gastronomic adventures at Shabir Dinner.
+        </h1>
+        <p className="sm:text-lg lg:text-xl mb-4 lg:p-8">
+          At Shabir Dinner, we believe that good food is not only about taste but also about the stories behind it.
+          <br />
+          We are passionate about connecting people with the best local restaurants around them.
+        </p>
       </div>
-      <ul style={listStyle}>
-        <li style={listItemStyle}>
-          <span style={arrowStyle}></span> Order your favorite food
-        </li>
-        <li style={listItemStyle}>
-          <span style={arrowStyle}></span> Discover new recipes
-        </li>
-        <li style={listItemStyle}>
-          <span style={arrowStyle}></span> Enjoy fast and convenient delivery
-        </li>
-      </ul>
       <button className="hover:bg-yellow-600 text-white border border-yellow-500 font-bold py-2 px-4 rounded-sm w-60">
-  Order Now
-</button>
+        Order Now
+      </button>
     </section>
   );
 };
 
 export default Section1;
+
