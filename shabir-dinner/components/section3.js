@@ -1,10 +1,7 @@
 import React, { useEffect, useCallback } from "react";
-import { FaHandsHoldingCircle } from "react-icons/fa";
-import { GiForkKnifeSpoon } from "react-icons/gi";
-import { IoFastFoodSharp } from "react-icons/io5";
-import { PiHamburgerBold } from "react-icons/pi";
 import { BsReceipt } from "react-icons/bs";
 import { motion, useAnimation } from "framer-motion";
+import Image from "next/image";
 
 const Section3 = () => {
   const firstSectionControls = useAnimation();
@@ -36,31 +33,43 @@ const Section3 = () => {
     <section className="bg-yellow-500 flex flex-col sm:flex-row justify-center items-center py-8 space-x-4 space-y-8 gap-4  border-b">
       {/* First Section */}
       <motion.div
-        initial={{ y: -10, opacity: 0 }}
-        animate={secondSectionControls}
-        transition={{ duration: 0.8, delay: 0.5 }}
-        className="bg-white rounded-sm p-8 border border-gray-300 shadow-md sm:w-96 sm:h-70"
-      >
-        <h2 className="text-2xl font-bold text-center text-yellow-500 mt-4 sm:mt-8">
-          Your Source for Delicious Recipes and Culinary Adventures
-        </h2>
-        <p className="mt-4 text-gray-800">
-          Are you a food enthusiast always on the lookout for new flavors and
-          exciting dishes? At Dinner Magazine, we are passionate about sharing
-          our love for food through captivating articles, inspiring recipes, and
-          culinary journeys.
-        </p>
-        <p className="mt-4 text-gray-800">
-          Our team of dedicated writers brings you the latest trends, unique
-          cuisines, and expert tips to elevate your dining experiences. Whether
-          you&apos;re a home cook or a seasoned chef, we have something special
-          for you.
-        </p>
-        <div className="mt-6 flex justify-center">
-          <button className="hover:bg-yellow-600 text-black border border-yellow-500 font-bold py-2 px-4 rounded-sm w-60">Read More</button>
-        </div>
-      </motion.div>
-
+  initial={{ y: -10, opacity: 0 }}
+  animate={secondSectionControls}
+  transition={{ duration: 0.8, delay: 0.5 }}
+  className="bg-white rounded-sm p-8 border border-gray-300 shadow-md sm:w-96 sm:h-70 relative overflow-hidden"
+>
+  <div className="absolute inset-0">
+    <Image
+      src="/images/chef.jpg"
+      layout="fill"
+      objectFit="cover"
+      alt="culinary"
+      className="rounded-sm"
+    />
+  </div>
+  <div className="relative z-10"> {/* Create a new stacking context */}
+    <h2 className="text-2xl font-bold text-center text-yellow-500 mt-4 sm:mt-8">
+      Your Source for Delicious Recipes and Culinary Adventures
+    </h2>
+    <p className="mt-4 text-white">
+      Are you a food enthusiast always on the lookout for new flavors and
+      exciting dishes? At Dinner Magazine, we are passionate about sharing
+      our love for food through captivating articles, inspiring recipes, and
+      culinary journeys.
+    </p>
+    <p className="mt-4 text-white">
+      Our team of dedicated writers brings you the latest trends, unique
+      cuisines, and expert tips to elevate your dining experiences. Whether
+      you&apos;re a home cook or a seasoned chef, we have something special
+      for you.
+    </p>
+    <div className="mt-6 flex justify-center">
+      <button className="hover:bg-yellow-600 text-white border border-yellow-500 font-bold py-2 px-4 rounded-sm w-60">
+        Read More
+      </button>
+    </div>
+  </div>
+</motion.div>
       {/* Second Section */}
       <div className="bg-gray-700 rounded-sm text-white p-8 w-full sm:w-96 sm:h-70 md:w-96 md:h-90 lg:h-90">
         <motion.div
@@ -89,7 +98,9 @@ const Section3 = () => {
             creations.
           </p>
           <div className="mt-6 flex justify-center">
-            <button className="hover:bg-yellow-600 text-white border border-yellow-500 font-bold py-2 px-4 rounded-sm w-60">Talk to Us</button>
+            <button className="hover:bg-yellow-600 text-white border border-yellow-500 font-bold py-2 px-4 rounded-sm w-60">
+              Talk to Us
+            </button>
           </div>
         </motion.div>
       </div>
@@ -112,14 +123,15 @@ const Section3 = () => {
           cooking with others. Our mission is to help you discover new recipes
           and cuisines from around the world. We&apos;re here to make your life
           easier by providing you with delicious recipes that are easy to follow
-          and taste great!
-          Subscribe today and get access to our library of over 1000+ recipes
-          from all over the world. You&apos;ll also receive exclusive discounts
-          on our products and services, as well as special offers only available
-          through our newsletter.
+          and taste great! Subscribe today and get access to our library of over
+          1000+ recipes from all over the world. You&apos;ll also receive
+          exclusive discounts on our products and services, as well as special
+          offers only available through our newsletter.
         </p>
         <div className="mt-6 flex justify-center">
-          <button className="hover:bg-yellow-600 text-black border border-yellow-500 font-bold py-2 px-4 rounded-sm w-60">Subscribe</button>
+          <button className="hover:bg-yellow-600 text-black border border-yellow-500 font-bold py-2 px-4 rounded-sm w-60">
+            Subscribe
+          </button>
         </div>
       </motion.div>
     </section>
