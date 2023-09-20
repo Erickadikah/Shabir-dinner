@@ -57,7 +57,7 @@ const Section3 = () => {
           for you.
         </p>
         <div className="mt-6 flex justify-center">
-          <button className="button-primary">Read More</button>
+          <button className="hover:bg-yellow-600 text-black border border-yellow-500 font-bold py-2 px-4 rounded-sm w-60">Read More</button>
         </div>
       </motion.div>
 
@@ -89,7 +89,7 @@ const Section3 = () => {
             creations.
           </p>
           <div className="mt-6 flex justify-center">
-            <button className="button-primary">Talk to Us</button>
+            <button className="hover:bg-yellow-600 text-white border border-yellow-500 font-bold py-2 px-4 rounded-sm w-60">Talk to Us</button>
           </div>
         </motion.div>
       </div>
@@ -108,16 +108,18 @@ const Section3 = () => {
           The Best Place to Find Recipes for and Order Food
         </h2>
         <p className="mt-4 text-gray-800">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          voluptatum, voluptate, quibusdam, quia voluptas quod quos dolorum
-          voluptatibus quae quas fugit. Quisquam voluptatum, voluptate,
-          quibusdam, quia voluptas quod quos dolorum voluptatibus quae quas
-          fugit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Quisquam voluptatum, voluptate, quibusdam, quia voluptas quod quos
-          dolorum
+          We are a team of food enthusiasts who love to share our passion for
+          cooking with others. Our mission is to help you discover new recipes
+          and cuisines from around the world. We&apos;re here to make your life
+          easier by providing you with delicious recipes that are easy to follow
+          and taste great!
+          Subscribe today and get access to our library of over 1000+ recipes
+          from all over the world. You&apos;ll also receive exclusive discounts
+          on our products and services, as well as special offers only available
+          through our newsletter.
         </p>
         <div className="mt-6 flex justify-center">
-          <button className="button-primary">Subscribe</button>
+          <button className="hover:bg-yellow-600 text-black border border-yellow-500 font-bold py-2 px-4 rounded-sm w-60">Subscribe</button>
         </div>
       </motion.div>
     </section>

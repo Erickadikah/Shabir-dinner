@@ -7,9 +7,8 @@ import { PiHamburgerBold } from "react-icons/pi";
 import { GiFoodTruck } from "react-icons/gi";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import chefImage from "../public/images/chicken1.jpg"
-import pizza from "../public/images/pizza.jpg"
-
+import chefImage from "../public/images/grill1.jpg";
+// import pizza from "../public/images/pizza.jpg";
 
 const Section2 = () => {
   const [selectedId, setSelectedId] = useState(null);
@@ -44,13 +43,19 @@ const Section2 = () => {
     },
     {
       id: "foodTruck",
-      title: "Food Truck",
-      subtitle: "Subtitle 4",
+      title: "Outdoor Catering",
+      subtitle: "Our Outdoor Catering Services",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.\
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        "Iam deduated to providing the best catering services in the country.\
+        to make your event a success. We have a team of highly trained and experienced\
+        chefs who are passionate about food and customer service.\
+        We offer a wide range of menus to suit all budgets and tastes.\
+        Our team will work with you to create a menu that is perfect for your event.\
+        Whether you are looking for a casual buffet or an elegant sit-down dinner,\
+        we can help! Contact us today for more information about our catering services!\
+        We look forward to hearing from you soon!",
       images: [chefImage, chefImage, chefImage],
-    }
+    },
   ];
 
   return (
@@ -94,8 +99,7 @@ const Section2 = () => {
                   autoPlay={true}
                   showArrows={true}
                   showThumbs={false}
-                  // width={300}
-                  // height={200}
+                  infiniteLoop={true}
                 >
                   {items
                     .find((item) => item.id === selectedId)
@@ -107,6 +111,7 @@ const Section2 = () => {
                           objectFit="cover"
                           width={300}
                           height={200}
+                          layout="responsive"
                         />
                       </div>
                     ))}
@@ -117,12 +122,12 @@ const Section2 = () => {
               </motion.p>
               <motion.button
                 onClick={() => setSelectedId(null)}
-                className="block mx-auto px-4 py-2 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-600 transition duration-300"
+                className="hover:bg-yellow-600 text-black border border-yellow-500 font-bold py-2 px-4 rounded-sm w-60"
               >
                 Close
               </motion.button>
             </motion.div>
-          )}
+          )}5
         </AnimatePresence>
       </div>
     </section>

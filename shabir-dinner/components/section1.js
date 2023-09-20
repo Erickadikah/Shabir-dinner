@@ -63,7 +63,7 @@ const Section1 = () => {
         />
       </div>
       <div className="sm:mb-3 lg:mb-10">
-        <h1 className="sm:text-2xl lg:text-4xl font-extrabold text-[rgb(165,243,252)] text-800 lg:p-8">
+        <h1 className="sm:text-3xl lg:text-4xl font-extrabold text-[rgb(165,243,252)] text-800 lg:p-8">
           Indulge your senses in a world of mouthwatering flavors, culinary inspiration,
           <br />
           and gastronomic adventures at Shabir Dinner.
