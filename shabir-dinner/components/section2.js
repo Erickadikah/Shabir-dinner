@@ -8,7 +8,6 @@ import { GiFoodTruck } from "react-icons/gi";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import chefImage from "../public/images/grill1.jpg";
-// import pizza from "../public/images/pizza.jpg";
 
 const Section2 = () => {
   const [selectedId, setSelectedId] = useState(null);
@@ -108,10 +107,11 @@ const Section2 = () => {
                         <Image
                           src={image}
                           alt={`Image ${index}`}
-                          objectFit="cover"
+                          layout="responsive"
+                          objectFit="cover" // Add this line
+                          objectPosition="center top" // Add this line with the desired position
                           width={300}
                           height={200}
-                          layout="responsive"
                         />
                       </div>
                     ))}
@@ -127,7 +127,8 @@ const Section2 = () => {
                 Close
               </motion.button>
             </motion.div>
-          )}5
+          )}
+          5
         </AnimatePresence>
       </div>
     </section>
