@@ -13,7 +13,8 @@
   font-family: 'Poppins', sans-serif;
   font-family: 'Roboto', sans-serif;  
   box-sizing: border-box;
-  overflow-y: scroll; 
+  overflow-y: scroll;
+  overflow-x: hidden; 
 }
 
 ::-webkit-scrollbar {
@@ -37,7 +38,6 @@
   text-align: center;
   margin-top: auto;
 
-  /* Focus styles */
   outline: none;
 }
 

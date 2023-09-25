@@ -8,6 +8,9 @@ import { GiFoodTruck } from "react-icons/gi";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import chefImage from "../public/images/grill1.jpg";
+import chicken from "../public/images/back.jpg";
+import burger from "../public/images/test.jpg"
+
 
 const Section2 = () => {
   const [selectedId, setSelectedId] = useState(null);
@@ -16,11 +19,11 @@ const Section2 = () => {
     {
       id: "forkKnife",
       title: "Dinner",
-      subtitle: "Cant cook ode our dinner Specials",
+      subtitle: "Cant cook! order our dinner Specials",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.\
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      images: [chefImage, chefImage, chefImage],
+      images: [chicken],
     },
     {
       id: "fastFood",
@@ -29,7 +32,7 @@ const Section2 = () => {
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.\
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      images: [chefImage, chefImage],
+      images: [chefImage],
     },
     {
       id: "hamburger",
@@ -38,7 +41,7 @@ const Section2 = () => {
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.\
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      images: [chefImage, chefImage, chefImage],
+      images: [burger],
     },
     {
       id: "foodTruck",
@@ -58,7 +61,7 @@ const Section2 = () => {
   ];
 
   return (
-    <section className="bg-gray-100 py-16  border-b">
+    <section className="bg-gray-100 py-10  border-b">
       <div className="container mx-auto px-4">
         <h1 className="text-3xl font-extrabold text-center mb-8">
           Our Top Categories
@@ -93,12 +96,14 @@ const Section2 = () => {
               <motion.h2 className="text-2xl mb-4">
                 {items.find((item) => item.id === selectedId)?.title}
               </motion.h2>
-              <div className="flex justify-center items-center gap-4 mb-4">
+              <div className="flex justify-center items-center gap-4 mb-4" style={{
+                height: '70vh'
+              }}>
                 <Carousel
                   autoPlay={true}
                   showArrows={true}
                   showThumbs={false}
-                  infiniteLoop={true}
+                  // infiniteLoop={true}
                 >
                   {items
                     .find((item) => item.id === selectedId)
@@ -108,8 +113,8 @@ const Section2 = () => {
                           src={image}
                           alt={`Image ${index}`}
                           layout="responsive"
-                          objectFit="cover" // Add this line
-                          objectPosition="center top" // Add this line with the desired position
+                          objectFit="cover"
+                          objectPosition="center top"
                           width={300}
                           height={200}
                         />

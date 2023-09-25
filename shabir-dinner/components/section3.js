@@ -33,74 +33,88 @@ const Section3 = () => {
     <section className="bg-yellow-500 flex flex-col sm:flex-row justify-center items-center py-8 space-x-4 space-y-8 gap-4  border-b">
       {/* First Section */}
       <motion.div
-  initial={{ y: -10, opacity: 0 }}
-  animate={secondSectionControls}
-  transition={{ duration: 0.8, delay: 0.5 }}
-  className="bg-white rounded-sm p-8 border border-gray-300 shadow-md sm:w-96 sm:h-70 relative overflow-hidden"
->
-  <div className="absolute inset-0">
-    <Image
-      src="/images/chef.jpg"
-      layout="fill"
-      objectFit="cover"
-      alt="culinary"
-      className="rounded-sm"
-    />
-  </div>
-  <div className="relative z-10"> {/* Create a new stacking context */}
-    <h2 className="text-2xl font-bold text-center text-yellow-500 mt-4 sm:mt-8">
-      Your Source for Delicious Recipes and Culinary Adventures
-    </h2>
-    <p className="mt-4 text-white">
-      Are you a food enthusiast always on the lookout for new flavors and
-      exciting dishes? At Dinner Magazine, we are passionate about sharing
-      our love for food through captivating articles, inspiring recipes, and
-      culinary journeys.
-    </p>
-    <p className="mt-4 text-white">
-      Our team of dedicated writers brings you the latest trends, unique
-      cuisines, and expert tips to elevate your dining experiences. Whether
-      you&apos;re a home cook or a seasoned chef, we have something special
-      for you.
-    </p>
-    <div className="mt-6 flex justify-center">
-      <button className="hover:bg-yellow-600 text-white border border-yellow-500 font-bold py-2 px-4 rounded-sm w-60">
-        Read More
-      </button>
-    </div>
-  </div>
-</motion.div>
+        initial={{ y: -10, opacity: 0 }}
+        animate={secondSectionControls}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="bg-white rounded-sm p-8 border border-gray-300 shadow-md sm:w-96 sm:h-70 relative overflow-hidden"
+      >
+        <div className="absolute inset-0">
+          <Image
+            src="/images/chef.jpg"
+            layout="fill"
+            objectFit="cover"
+            alt="culinary"
+            className="rounded-sm"
+          />
+        </div>
+        <div className="relative z-10">
+          {" "}
+          {/* Create a new stacking context */}
+          <h2 className="text-2xl font-bold text-center text-yellow-500 mt-4 sm:mt-8">
+            Your Source for Delicious Recipes and Culinary Adventures
+          </h2>
+          <p className="mt-4 text-white">
+            Are you a food enthusiast always on the lookout for new flavors and
+            exciting dishes? At Dinner Magazine, we are passionate about sharing
+            our love for food through captivating articles, inspiring recipes,
+            and culinary journeys.
+          </p>
+          <p className="mt-4 text-white">
+            Our team of dedicated writers brings you the latest trends, unique
+            cuisines, and expert tips to elevate your dining experiences.
+            Whether you&apos;re a home cook or a seasoned chef, we have
+            something special for you.
+          </p>
+          <div className="mt-6 flex justify-center">
+            <button className="hover:bg-yellow-600 text-white border border-yellow-500 font-bold py-2 px-4 rounded-sm w-60">
+              Read More
+            </button>
+          </div>
+        </div>
+      </motion.div>
       {/* Second Section */}
-      <div className="bg-gray-700 rounded-sm text-white p-8 w-full sm:w-96 sm:h-70 md:w-96 md:h-90 lg:h-90">
+      <div className=" rounded-sm text-white p-8 w-full sm:w-96 sm:h-70 md:w-96 md:h-90 lg:h-90 relative overflow-hidden">
         <motion.div
           initial={{ y: -10, opacity: 0 }}
           animate={firstSectionControls}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-2xl font-bold mt-4 sm:mt-8">ABOUT US</h1>
-          <h2 className="text-lg font-semibold mt-2">
-            Welcome to Dinner{" "}
-            <span className="text-yellow-500">
-              the best place to find recipes for and order food
-            </span>
-          </h2>
-          <p className="mt-4 text-gray-300">
-            At TasteBuds Bistro, we believe that food is an art that should
-            ignite your taste buds and leave lasting memories. Our culinary
-            journey began in 2005 when our founder, Chef Emily, turned her
-            passion for crafting exquisite dishes into a reality. With a vision
-            to create a haven for food lovers, TasteBuds Bistro was born.
-          </p>
-          <p className="mt-4 text-gray-300">
-            Experience a fusion of flavors that celebrate both local traditions
-            and global influences. Our carefully curated menu showcases a
-            diverse range of dishes, from classic favorites to innovative
-            creations.
-          </p>
-          <div className="mt-6 flex justify-center">
-            <button className="hover:bg-yellow-600 text-white border border-yellow-500 font-bold py-2 px-4 rounded-sm w-60">
-              Talk to Us
-            </button>
+          <div className="absolute inset-0">
+            <Image
+              src="/images/about-us.jpg"
+              layout="fill"
+              objectFit="cover"
+              alt="culinary"
+              className="rounded-sm border border-gray-300"
+            />
+          </div>
+          <div className="relative z-10">
+            <h1 className="text-2xl font-bold mt-4 sm:mt-8">ABOUT US</h1>
+            <h2 className="text-lg font-semibold mt-2">
+              Welcome to Dinner{" "}
+              <span className="text-yellow-500">
+                the best place to find recipes for and order food
+              </span>
+            </h2>
+            <p className="mt-4 text-white">
+              At TasteBuds Bistro, we believe that food is an art that should
+              ignite your taste buds and leave lasting memories. Our culinary
+              journey began in 2005 when our founder, Chef Emily, turned her
+              passion for crafting exquisite dishes into a reality. With a
+              vision to create a haven for food lovers, TasteBuds Bistro was
+              born.
+            </p>
+            <p className="mt-4 text-white">
+              Experience a fusion of flavors that celebrate both local
+              traditions and global influences. Our carefully curated menu
+              showcases a diverse range of dishes, from classic favorites to
+              innovative creations.
+            </p>
+            <div className="mt-6 flex justify-center">
+              <button className="hover:bg-yellow-600 text-white border border-yellow-500 font-bold py-2 px-4 rounded-sm w-60">
+                Talk to Us
+              </button>
+            </div>
           </div>
         </motion.div>
       </div>
@@ -110,8 +124,18 @@ const Section3 = () => {
         initial={{ y: -10, opacity: 0 }}
         animate={thirdSectionControls}
         transition={{ duration: 1, delay: 0.1 }}
-        className="bg-white rounded-sm p-8 border border-gray-300 shadow-md sm:w-96 sm:h-70 mt-4 sm:mt-0"
+        className="bg-white rounded-sm p-8 border border-gray-300 shadow-md sm:w-96 sm:h-70 relative overflow-hidden"
       >
+      <div className="absolute inset-0">
+            <Image
+              src="/images/recipe.jpg"
+              layout="fill"
+              objectFit="cover"
+              alt="culinary"
+              className="rounded-sm"
+            />
+          </div>
+        <div className="relative z-10">
         <div className="flex justify-center items-center mt-4 sm:mt-8">
           <BsReceipt size={35} className="text-gray-800" />
         </div>
@@ -132,6 +156,7 @@ const Section3 = () => {
           <button className="hover:bg-yellow-600 text-black border border-yellow-500 font-bold py-2 px-4 rounded-sm w-60">
             Subscribe
           </button>
+        </div>
         </div>
       </motion.div>
     </section>

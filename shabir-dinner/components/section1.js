@@ -27,31 +27,10 @@ const Section1 = () => {
     marginBottom: "2rem",
   };
 
-  const iconContainerStyle = {
-    listStyleType: "none",
-    textAlign: "left",
-    fontSize: "1.2rem",
-    paddingLeft: "1rem",
-    marginTop: "1rem", // Add margin to separate from the text
-  };
-
-  const arrowStyle = {
-    position: "absolute",
-    left: "calc(100% - 1rem)", // Adjust the distance from the right edge
-    top: "50%",
-    transform: "translateY(-50%)", // Vertically center the arrow
-    content: "''",
-    display: "inline-block",
-    width: "0",
-    height: "0",
-    borderTop: "0.4rem solid transparent",
-    borderBottom: "0.4rem solid transparent",
-    borderLeft: "0.8rem solid #FFD700", // Adjust the color and size of the arrow
-  };
 
   return (
     <section style={sectionStyle}>
-      <div style={containerStyle}>
+      {/*<div style={containerStyle}>
         <Image
           alt="Chef"
           src="/images/chef.jpg"
@@ -61,7 +40,7 @@ const Section1 = () => {
           objectFit="cover"
           objectPosition="center"
         />
-      </div>
+  </div>*/}
       <div className="sm:mb-3 lg:mb-10">
         <h1 className="sm:text-3xl lg:text-4xl font-extrabold text-[rgb(165,243,252)] text-800 lg:p-8">
           Indulge your senses in a world of mouthwatering flavors, culinary inspiration,
