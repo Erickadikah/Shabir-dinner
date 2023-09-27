@@ -30,7 +30,7 @@ const Section3 = () => {
   }, [handleScroll]);
 
   return (
-    <section className="bg-yellow-500 flex flex-col sm:flex-row justify-center items-center py-8 space-x-4 space-y-8 gap-4  border-b">
+    <section className="bg-[rgb(255,255,255)] flex flex-col sm:flex-row justify-center items-center py-8 space-x-4 space-y-8 gap-4  border-b">
       {/* First Section */}
       <motion.div
         initial={{ y: -10, opacity: 0 }}
@@ -42,7 +42,7 @@ const Section3 = () => {
           <Image
             src="/images/chef.jpg"
             layout="fill"
-            objectFit="cover"
+            style={{ objectFit: 'cover' }}
             alt="culinary"
             className="rounded-sm"
           />
@@ -83,7 +83,7 @@ const Section3 = () => {
             <Image
               src="/images/about-us.jpg"
               layout="fill"
-              objectFit="cover"
+              style={{ objectFit: 'cover' }}
               alt="culinary"
               className="rounded-sm border border-gray-300"
             />
@@ -130,7 +130,7 @@ const Section3 = () => {
             <Image
               src="/images/recipe.jpg"
               layout="fill"
-              objectFit="cover"
+              style={{ objectFit: 'cover' }}
               alt="culinary"
               className="rounded-sm"
             />
@@ -153,7 +153,7 @@ const Section3 = () => {
           offers only available through our newsletter.
         </p>
         <div className="mt-6 flex justify-center">
-          <button className="hover:bg-yellow-600 text-black border border-yellow-500 font-bold py-2 px-4 rounded-sm w-60">
+          <button className="hover:bg-yellow-600 text-white border border-yellow-500 font-bold py-2 px-4 rounded-sm w-60">
             Subscribe
           </button>
         </div>
