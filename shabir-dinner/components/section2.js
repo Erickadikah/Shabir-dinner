@@ -113,7 +113,6 @@ const Section2 = () => {
                           src={image}
                           alt={`Image ${index}`}
                           layout="responsive"
-                          objectFit="cover"
                           objectPosition="center top"
                           width={300}
                           height={200}
