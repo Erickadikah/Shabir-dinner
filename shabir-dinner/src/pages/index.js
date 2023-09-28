@@ -9,7 +9,6 @@ import { Box, Container, useColorMode } from '@chakra-ui/react';
 import { IconButton } from '@chakra-ui/react';
 import { FaComments } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
-// import { RiMessage2Line } from 'react-icons/ri';
 
 export default function Home() {
    const [isFormVisible, setIsFormVisible] = useState(false);
