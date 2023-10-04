@@ -30,13 +30,13 @@ const Section3 = () => {
   }, [handleScroll]);
 
   return (
-    <section className="bg-[rgb(255,255,255)] flex flex-col sm:flex-row justify-center items-center p-8 sm:p-4 space-x-4 space-y-8 gap-4  border-b">
+    <section className="bg-[rgb(255,255,255)] flex flex-col sm:flex-row justify-center items-center py-8 space-x-4 space-y-8 gap-4  border-b">
       {/* First Section */}
       <motion.div
         initial={{ y: -10, opacity: 0 }}
         animate={secondSectionControls}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className="bg-white rounded-sm p-8 border border-gray-300 shadow-md sm:text-sm lg:text-lg lg:w-70 lg:70 sm:w-96 sm:h-45 relative overflow-hidden"
+        className="bg-white rounded-sm p-8 border border-gray-300 shadow-md sm:w-96 sm:h-70 relative overflow-hidden"
       >
         <div className="absolute inset-0">
           <Image
@@ -73,7 +73,7 @@ const Section3 = () => {
         </div>
       </motion.div>
       {/* Second Section */}
-      <div className=" rounded-sm text-white w-full sm:w-96 sm:h-70 md:w-96 md:h-90 lg:h-90 overflow-hidden">
+      <div className=" rounded-sm text-white p-8 w-full sm:w-96 sm:h-70 md:w-96 md:h-90 lg:h-90 relative overflow-hidden">
         <motion.div
           initial={{ y: -10, opacity: 0 }}
           animate={firstSectionControls}
