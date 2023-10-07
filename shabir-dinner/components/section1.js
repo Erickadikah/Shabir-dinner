@@ -22,7 +22,7 @@ const Section1 = () => {
   const containerStyle = {
     width: "250px",
     height: "250px",
-    borderRadius: "50%",
+    // borderRadius: "50%",
     overflow: "hidden",
     marginBottom: "2rem",
   };
@@ -30,18 +30,16 @@ const Section1 = () => {
 
   return (
     <section style={sectionStyle}>
-      {/*<div style={containerStyle}>
-        <Image
-          alt="Chef"
-          src="/images/chef.jpg"
-          width={250}
-          height={250}
-          layout="responsive"
-          objectFit="cover"
-          objectPosition="center"
-        />
-  </div>*/}
-      <div className="sm:mb-3 lg:mb-10">
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+  animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0.5,
+  }}
+  className="sm:mb-3 lg:mb-10">
         <h1 className="sm:text-3xl lg:text-4xl font-extrabold text-[rgb(165,243,252)] text-800 lg:p-8">
           Indulge your senses in a world of mouthwatering flavors, culinary inspiration,
           <br />
@@ -52,7 +50,7 @@ const Section1 = () => {
           <br />
           We are passionate about connecting people with the best local restaurants around them.
         </p>
-      </div>
+      </motion.div>
       <button className="hover:bg-yellow-600 text-white border border-yellow-500 font-bold py-2 px-4 rounded-sm w-60">
         Order Now
       </button>
