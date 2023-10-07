@@ -30,8 +30,14 @@ const Section3 = () => {
   }, [handleScroll]);
 
   return (
-    <section className="bg-[rgb(255,255,255)] flex flex-col sm:flex-row justify-center items-center py-8 space-x-4 space-y-8 gap-4  border-b">
-      {/* First Section */}
+    <section className="bg-[rgb(255,255,255)] flex flex-col sm:flex-row justify-center items-center py-8 space-x-4 space-y-8 gap-4 border-b relative">
+  {/* First Section */}
+  <div className="absolute top-0 left-1/2 transform -translate-x-1/2  bg-opacity-80 p-4 rounded-sm z-10">
+    <h1>
+      <span className="text-3xl font-bold text-yellow-500">Dinner</span>{" "}
+      Magazine
+    </h1>
+  </div>
       <motion.div
         initial={{ y: -10, opacity: 0 }}
         animate={secondSectionControls}
