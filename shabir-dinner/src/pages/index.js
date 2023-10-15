@@ -9,6 +9,8 @@ import { Box, Container, useColorMode } from '@chakra-ui/react';
 import { IconButton } from '@chakra-ui/react';
 import { FaComments } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
+// import FaqSimple from '../../components/faq';
+import { MantineProvider } from '@mantine/core';
 
 export default function Home() {
    const [isFormVisible, setIsFormVisible] = useState(false);
@@ -18,6 +20,7 @@ export default function Home() {
     setIsFormVisible(!isFormVisible);
   };
   return (
+    <MantineProvider>
     <Format>
       <Section1 />
       <Section5 />
@@ -36,8 +39,6 @@ export default function Home() {
         >
           <IconButton
           icon={<FaComments />}
-            // bg='blue.500'
-            // style={{ backgroundColor: 'rgb(234, 179, 8)' }}
             color='white'
             borderRadius='full'
             boxShadow='lg'
@@ -81,7 +82,9 @@ export default function Home() {
             />
           </Box>
         )}
+      {/*<FaqSimple />*/}
       <Section4 />
     </Format>
+    </MantineProvider>
   )
 }
