@@ -14,7 +14,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="bg-yellow-500 w-full h-20 flex items-center justify-between px-6 md:px-12">
+    <nav className="bg-yellow-500 w-full h-24 flex items-center justify-between px-6 md:px-12">
       <Link href="/">
         <div className="cursor-pointer">
           <div className="flex items-center gap-2">
