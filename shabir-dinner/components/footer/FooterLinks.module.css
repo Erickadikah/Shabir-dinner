@@ -1,8 +1,9 @@
 .footer {
   margin-top: rem(120px);
+  height: 35vh;
   padding-top: calc(var(--mantine-spacing-xl) * 2);
   padding-bottom: calc(var(--mantine-spacing-xl) * 2);
-  background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+  background-color: gray;
   border-top: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
 }
 
@@ -20,12 +21,12 @@
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
+  margin-top: 4rem;
 }
 
 .groups {
   display: flex;
-  flex-wrap: wrap;
-  display: none;
+  gap: 20rem;
 }
 
 .wrapper {
@@ -57,7 +58,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: var(--mantine-spacing-xl);
+  margin-top: 2rem;
   padding-top: var(--mantine-spacing-xl);
   padding-bottom: var(--mantine-spacing-xl);
   border-top: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-4));
@@ -66,6 +67,7 @@
 
 .social {
   margin-top: var(--mantine-spacing-xs);
-  gap: var(--mantine-spacing-xs);
+  gap: var(--mantine-spacing-xs); /* Add vendor prefixes for broader browser support */
   display: flex;
 }
+

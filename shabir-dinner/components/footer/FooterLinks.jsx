@@ -1,6 +1,5 @@
 import { Text, Container, ActionIcon, Group, rem } from '@mantine/core';
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
-// import { MantineLogo } from '@mantine/ds';
 import classes from './FooterLinks.module.css';
 import { Code } from '@mantine/code-highlight';
 
@@ -55,16 +54,15 @@ function FooterLinks() {
       <Container className={classes.inner}>
         <div className={classes.logo}>
           {/*<Text size="xs" c="dimmed" className={classes.description}>
-            Build fully functional accessible web applications faster than ever
+            Socials
   </Text>*/}
         </div>
         <div className={classes.groups}>{groups}</div>
       </Container>
       <Container className={classes.afterFooter}>
         <Text c="dimmed" size="sm">
-          © 2020 mantine.dev. All rights reserved.
+          © 2023 mantine.dev. All rights reserved.
         </Text>
-
         <div className={classes.social}>
   <ActionIcon size="lg" color="gray" variant="subtle">
     <IconBrandTwitter style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
@@ -78,8 +76,6 @@ function FooterLinks() {
     <IconBrandInstagram style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
   </ActionIcon>
 </div>
-
-
       </Container>
     </footer>
   );
