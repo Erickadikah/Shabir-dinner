@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-import Image from "next/image";
-import { ImFacebook, ImInstagram, ImTwitter } from "react-icons/im";
-import { HiChevronDown, HiChevronUp } from "react-icons/hi";
 import Link from "next/link";
-import logo from "../public/images/chef.svg";
-import { motion } from "framer-motion";
+import { HiChevronDown, HiChevronUp } from "react-icons/hi";
+import { ImFacebook, ImInstagram, ImTwitter } from "react-icons/im";
 
 const Navigation = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -14,72 +11,68 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="bg-yellow-500 w-full h-24 flex items-center justify-between px-6 md:px-12">
+    <nav className="sticky top-0 bg-[#F9FAFC] w-full h-24 flex items-center justify-between px-6 md:px-12">
       <Link href="/">
-        <div className="cursor-pointer">
-          <div className="flex items-center gap-2">
-            <motion.div>
-              <Image src={logo} alt="Logo" width={40} height={40} />
-            </motion.div>
-            <h1 className="text-2xl font-bold">Foodie</h1>
-          </div>
+        <div className="flex items-center">
+          <h1 className="text-3xl font-bold text-black">Foodie</h1>
         </div>
       </Link>
-
-      <div className="md:flex justify-center items-center w-1/2">
-        <input
-          type="text"
-          className="input-text w-full py-2 px-4 rounded-full"
-          placeholder="Search..."
-        />
+      <div className="flex items-center space-x-6">
+        <Link
+          href="/features"
+          className="text-lg text-black hover:text-gray-300 hover:after:underline"
+        >
+          Features
+        </Link>
+        <Link
+          href="/pricing"
+          className="text-lg  text-black hover:text-gray-300"
+        >
+          Pricing
+        </Link>
+        <Link
+          href="/contact"
+          className="text-lg text-black hover:text-gray-300"
+        >
+          Contact
+        </Link>
       </div>
-
-      <div className="flex gap-6">
+      <div className="flex items-center space-x-6">
         <Link href="/">
-          <div className="cursor-pointer">
-            <ImFacebook color="#888888" size={24} />
-          </div>
+          <ImFacebook size={20} className="text-black hover:text-gray-300" />
         </Link>
         <Link href="/">
-          <div className="cursor-pointer">
-            <ImInstagram color="#888888" size={24} />
-          </div>
+          <ImInstagram size={20} className="text-black hover:text-gray-300" />
         </Link>
         <Link href="/">
-          <div className="cursor-pointer">
-            <ImTwitter color="#888888" size={24} />
-          </div>
+          <ImTwitter size={20} className="text-black hover:text-gray-300" />
         </Link>
-
         <div className="relative group">
           <button
-            className="group flex items-center"
+            className="group flex items-center text-black hover:text-gray-300"
             onClick={toggleDropdown}
             aria-label="Toggle Menu"
           >
-            <span className="text-gray-800 mr-2">Menu</span>
+            <span className="mr-2 text-black">Menu</span>
             {dropdownOpen ? (
-              <HiChevronUp className="text-gray-800" size={20} />
+              <HiChevronUp size={20} />
             ) : (
-              <HiChevronDown className="text-gray-800" size={20} />
+              <HiChevronDown size={20} />
             )}
           </button>
           {dropdownOpen && (
-            <div className="absolute top-full left-0 mt-2 py-2 bg-white border border-gray-200 shadow-lg rounded-md w-40">
-              <Link href="/">
-                <div className="cursor-pointer px-4 py-2 hover:bg-gray-100">
-                  Home
-                </div>
+            <div className="absolute top-12 left-0 mt-2 w-40 bg-white border border-gray-300 shadow-lg rounded-md">
+              <Link href="/" className="block px-4 py-2 hover:bg-gray-100">
+                Home
               </Link>
-              <Link href="/about">
-                <div className="cursor-pointer px-4 py-2 hover:bg-gray-100">
-                  About
-                </div>
+              <Link href="/about" className="block px-4 py-2 hover:bg-gray-100">
+                About
               </Link>
-              <Link href="/contact">
-                <div className="cursor-pointer px-4 py-2 hover:bg-gray-100">
-                  Contact
-                </div>
+              <Link
+                href="/contact"
+                className="block px-4 py-2 hover:bg-gray-100"
+              >
+                Contact
               </Link>
             </div>
           )}

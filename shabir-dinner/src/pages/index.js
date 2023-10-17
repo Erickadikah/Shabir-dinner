@@ -11,6 +11,7 @@ import { FaComments } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 // import FaqSimple from '../../components/faq';
 import { MantineProvider } from '@mantine/core';
+import Adds from '../../components/adds';
 
 export default function Home() {
    const [isFormVisible, setIsFormVisible] = useState(false);

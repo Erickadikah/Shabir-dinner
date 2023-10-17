@@ -2,6 +2,7 @@ import React, { useEffect, useCallback } from "react";
 import { BsReceipt } from "react-icons/bs";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
+import Adds from "./adds";
 
 const Section3 = () => {
   const firstSectionControls = useAnimation();
@@ -30,6 +31,7 @@ const Section3 = () => {
   }, [handleScroll]);
 
   return (
+    <>
     <section className="bg-[rgb(255,255,255)] flex flex-col sm:flex-row justify-center items-center py-8 space-x-4 space-y-8 gap-4 border-b relative">
   <div className="absolute top-0 sm:mt-10 left-1/2 transform -translate-x-1/2 bg-opacity-80 p-4 rounded-sm z-10">
     <h1>
@@ -166,7 +168,9 @@ const Section3 = () => {
     </div>
   </motion.div>
   </div>
-      </section>
+  </section>
+  <Adds />
+    </>
   );
 };
 
