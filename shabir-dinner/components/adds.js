@@ -8,24 +8,27 @@ const Adds = () => {
       <p className="text-lg text-black mt-8">
         Get the best software for your business today!
       </p>
-      <div className="flex flex-col md:flex-row justify-center items-center p-28">
-  <div className="w-72 h-72 md:w-auto md:h-auto">
-    <Image
-      src="/images/back.jpg"
-      width={500}
-      height={500}
-      alt="culinary"
-    />
-  </div>
-  <div className="flex-1 text-center p-10">
-    <h1 className="text-xl md:text-4xl text-black mt-10">
-      Unleash Your Radio Shows, Podcasts, and Audiobooks with Streambox Hosting
-    </h1>
-    <p className="text-lg text-gray-500">
-      Streambox Hosting is a cloud-based radio station automation solution which allows users to manage live shows, podcasts, on-demand content, and more. The platform can be accessed via native mobile apps for Android and iOS, as well as on any web browser.
-    </p>
-  </div>
-</div>
+      <div className="lg:flex sm:block lg:gap-8 sm:gap-4 lg:p-8 sm:p-4 lg:items-center">
+        <div className="lg:p-4 sm:p-2">
+          <Image
+            src="/images/back.jpg"
+            width={700}
+            height={500}
+            alt="culinary"
+          />
+        </div>
+        <div className="p-4 sm:mt-4">
+          <h1 className="text-2xl md:text-4xl font-semibold text-black mt-2">
+            INTUITIVE CONTROL PANELS
+          </h1>
+          <p className="text-lg text-gray-700 mt-4">
+            Streambox Hosting is a cloud-based radio station automation solution
+            that allows users to manage live shows, podcasts, on-demand content,
+            and more. The platform is accessible via native mobile apps for
+            Android and iOS, as well as on any web browser.
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
