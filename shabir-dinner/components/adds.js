@@ -21,7 +21,7 @@ const Adds = () => {
           <h1 className="text-2xl md:text-4xl font-semibold text-black mt-2">
             INTUITIVE CONTROL PANELS
           </h1>
-          <p className="text-lg text-gray-700 mt-4">
+          <p className="text-lg md:text-h3 text-gray-700 mt-4">
             Streambox Hosting is a cloud-based radio station automation solution
             that allows users to manage live shows, podcasts, on-demand content,
             and more. The platform is accessible via native mobile apps for

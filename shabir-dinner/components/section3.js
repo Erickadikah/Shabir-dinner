@@ -3,6 +3,7 @@ import { BsReceipt } from "react-icons/bs";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 import Adds from "./adds";
+import Pricing from './pricing'
 
 const Section3 = () => {
   const firstSectionControls = useAnimation();
@@ -170,6 +171,7 @@ const Section3 = () => {
   </div>
   </section>
   <Adds />
+  <Pricing />
     </>
   );
 };
