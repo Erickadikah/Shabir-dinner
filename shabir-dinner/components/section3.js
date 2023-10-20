@@ -171,6 +171,7 @@ const Section3 = () => {
   </div>
   </section>
   <Adds />
+  {/*
   <PricingCard
         title="Lifetime membership"
         description="Lorem ipsum dolor sit amet consect etur adipisicing elit. Itaque amet indis perferendis blanditiis repellendus etur quidem assumenda."
@@ -192,7 +193,7 @@ const Section3 = () => {
           'tidy up your home',
         ]}
         header="Annual Membership Pricing"
-      />
+      />}
       {/*<PricingCard
         title="Monthly membership"
         description="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
