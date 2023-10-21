@@ -102,7 +102,7 @@ const PropertyCard = () => {
           for a comfy and cosy place to lay their head for a night or two. This
           beach house sits in a vibrant neighborhood littered with cafes, pubs,
           restaurants and supermarkets and is close to all the major attractions
-          such as Edinburgh Castle and Arthur's Seat.
+          such as Edinburgh Castle and Arthurs Seat.
         </p>
       </div>
     </main>

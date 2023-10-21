@@ -61,7 +61,7 @@ function FooterLinks() {
       </Container>
       <Container className={classes.afterFooter}>
         <Text c="dimmed" size="sm">
-          © 2023 mantine.dev. All rights reserved.
+          © 2023 All rights reserved.
         </Text>
         <div className={classes.social}>
   <ActionIcon size="lg" color="gray" variant="subtle">
