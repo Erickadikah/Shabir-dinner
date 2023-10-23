@@ -2,13 +2,19 @@ import React from "react";
 import Pricing from "./projects";
 
 
-// Create a PropertyCard component that encapsulates your existing code
+// PropertyCard component that encapsulates your existing code
 const PropertyCard = () => {
   return (
     <main
-      class="py-6 px-4 sm:p-6 md:py-10 md:px-8 bg-gray-800"
+      class="py-6 px-4 sm:p-6 md:py-10 md:px-8 "
       style={{
         height: "70vh",
+        backgroundImage: `linear-gradient(rgba(26, 25, 25, 0.8), rgba(21, 21, 21, 0.8)),url('/images/location.jpg')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+        overflow: "hidden",
+
       }}
     >
       <div class="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2 mt-10">
@@ -30,13 +36,13 @@ const PropertyCard = () => {
           <img
             src="/images/hack.jpg"
             alt=""
-            class="hidden w-full h-52 object-cover  sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32"
+            class="hidden w-full h-52 object-cover  sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-42"
             loading="lazy"
           />
           <img
             src="/images/web.jpg"
             alt=""
-            class="hidden w-full h-52 object-cover md:block lg:row-start-2 lg:col-span-2 lg:h-32"
+            class="hidden w-full h-52 object-cover md:block lg:row-start-2 lg:col-span-2 lg:h-42"
             loading="lazy"
           />
         </div>
