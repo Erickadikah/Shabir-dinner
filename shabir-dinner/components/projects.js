@@ -5,22 +5,22 @@ const pricingData = [
   {
     title: 'Static, brochure Websites and Apps',
     description: 'A simple an eye-catching and cost-effective solution you can use to promote your business or company’s services online',
-    price: '$19',
-    features: ['Feature 1', 'Feature 2', 'Feature 3', 'Feature 4', 'Feature 5', 'Feature 6', 'Feature 7', 'Feature 8'],
+    price: 'Ksh 45,000',
+    features: ['Responsive Design Samples', 'up to 7 Pages', 'Content layout', 'Content Management System', 'Portfolio and services showcase', 'Assets Optimization i.e Images and Videos', 'Client on-boarding and Documentation', '.com domain + deploynment and hosting', 'Search Engine Optimization (SEO)', 'Friendly Support'],
     button: 'Get Started',
   },
   {
     title: 'Dynamic Websites and Apps',
     description: 'A dynamic application can provide a more customized user experience because it can be designed to respond to user input in real-time.',
-    price: '$49',
-    features: ['Feature 1', 'Feature 2', 'Feature 3', 'Feature 4'],
+    price: 'Ksh100,000',
+    features: ['Responsive design samples', 'Custom Content Management System', 'Database and Authentication', 'Custom API solution', 'Payment integration i.e Mpesa,paypal & Card', 'Progressive Web Application capabilities', 'Social media intergrations', 'Client On-boarding and Documentation', '.com domain + frontend hosting', 'Backend deploynment and hosting options', 'check iconFriendly Support and much more..'],
     button: 'Get Started',
   },
   {
     title: 'E-commerce Applications',
     description: 'An online marketplace will make it easier to buy or sell goods and services between merchants and customers.',
-    price: '$99',
-    features: ['Feature 1', 'Feature 2', 'Feature 3', 'Feature 4', 'Feature 5'],
+    price: 'Ksh 200,000',
+    features: ['Responsive design Process', 'Custom Content Management System', 'Role based Authentication', 'Payment integration i.e Mpesa,paypal & Card', 'Customized Dashboard', 'Shopify, Big-Commerce intergration', 'Top level domains + hosting plans', 'Search Engine Optimization(SEO)', 'Logistics Intergration i.e Sendy', 'riendly Support and much more..'],
     button: 'Get Started',
   },
 ];
@@ -48,13 +48,13 @@ const PricingCard = ({ title, description, price, features, button }) => {
 const Pricing = () => {
   return (
     <div className="justify-center items-center p-8" >
-      <h1 className="mt-1 text-2xl text-center font-semibold text-black sm:text-slate-900 md:text-2xl dark:sm:text-black">
-        Pricing
+      <h1 className="mt-1 text-4xl text-center font-semibold text-black sm:text-slate-900 md:text-2xl dark:sm:text-black">
+        Competitive Pricing
       </h1>
-      {/*<p className="mt-4 text-lg leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-slate-400">
-        We offer a variety of pricing options to suit your needs.
+      <p className="mt-4 text-center lg:text-xl sm:text-xl leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-slate-700">
+        We offer a variety of pricing options to suit your needs.<br />
         Why use several third parties to provide the various services you need? We can provide all services in one easy to access place!
-  </p>*/}
+    </p>
       <div className="flex flex-col sm:flex-row sm:justify-center sm:items-center mt-8 gap-8">
         {pricingData.map((pricing, index) => (
           <PricingCard key={index} {...pricing} />
