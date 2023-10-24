@@ -1,7 +1,5 @@
-import { Text, Container, ActionIcon, Group, rem } from '@mantine/core';
+import React from 'react';
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
-import classes from './FooterLinks.module.css';
-import { Code } from '@mantine/code-highlight';
 
 const data = [
   {
@@ -34,51 +32,50 @@ const data = [
 ];
 
 function FooterLinks() {
-  const groups = data.map((group) => {
-    const links = group.links.map((link, index) => (
-      <Text key={index} component="a" href={link.link} className={classes.link}>
-        {link.label}
-      </Text>
-    ));
-
-    return (
-      <div className={classes.wrapper} key={group.title}>
-        <Text className={classes.title}>{group.title}</Text>
-        {links}
-      </div>
-    );
-  });
-
   return (
-    <footer className={classes.footer}>
-      <Container className={classes.inner}>
-        <div className={classes.logo}>
-          {/*<Text size="xs" c="dimmed" className={classes.description}>
-            Socials
-  </Text>*/}
+    <footer className="bg-gray-900 py-16 sm:py-24">
+      <div className="container mx-auto flex flex-col sm:flex-row items-center sm:justify-between">
+        <div className="mb-8 sm:mb-0">
+          <img src="/images/gr.png" alt="Logo" className="max-w-40" />
         </div>
-        <div className={classes.groups}>{groups}</div>
-      </Container>
-      <Container className={classes.afterFooter}>
-        <Text c="dimmed" size="sm">
-          © 2023 All rights reserved.
-        </Text>
-        <div className={classes.social}>
-  <ActionIcon size="lg" color="gray" variant="subtle">
-    <IconBrandTwitter style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
-  </ActionIcon>
-  <div style={{ width: '1rem' }}></div>
-  <ActionIcon size="lg" color="gray" variant="subtle">
-    <IconBrandYoutube style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
-  </ActionIcon>
-  <div style={{ width: '1rem' }}></div> 
-  <ActionIcon size="lg" color="gray" variant="subtle">
-    <IconBrandInstagram style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
-  </ActionIcon>
-</div>
-      </Container>
+        <div className="flex space-x-8">
+          {data.map((group, groupIndex) => (
+            <div key={groupIndex} className="text-gray-300">
+              <h2 className="text-lg text-gray-600 font-semibold mb-3">{group.title}</h2>
+              <ul>
+                {group.links.map((link, linkIndex) => (
+                  <li key={linkIndex} className="mb-2">
+                    <a href={link.link} className="hover:underline">
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="border-t border-gray-700 py-8 mt-8">
+        <div className="container mx-auto flex items-center justify-between">
+          <p className="text-sm text-gray-500">&copy; 2023 All rights reserved.</p>
+          <div className="flex space-x-4">
+            <a href="#" className="text-gray-400 hover:text-white">
+              <IconBrandTwitter />
+            </a>
+            <a href="#" className="text-gray-400 hover:text-white">
+              <IconBrandYoutube />
+            </a>
+            <a href="#" className="text-gray-400 hover:text-white">
+              <IconBrandInstagram />
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 }
 
 export default FooterLinks;
+
+
+
