@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { HiChevronDown, HiChevronUp } from "react-icons/hi";
+import { HiMenu, HiX } from "react-icons/hi";
 import { RiArrowRightUpLine } from "react-icons/ri";
 import { BsArrowRightShort } from "react-icons/bs";
 
@@ -12,64 +12,85 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="bg-[#F9FAFC] w-full md:h-24 flex items-center justify-between px-6 md:px-12">
-      <Link href="/">
-        <div className="flex items-center bg-black">
-          <img src="/images/gr.png" alt="Logo" />
-        </div>
+  <nav className="bg-[#F9FAFC] w-full md:h-24 flex items-center justify-between px-6 md:px-12 flex-col md:flex-row">
+  <Link href="/">
+    <div className="flex items-center">
+      <img
+        src="/images/gr.png"
+        alt="Logo"
+        className="h-8 md:h-10 bg-black"
+      />
+    </div>
+  </Link>
+
+  {/* Desktop Navigation (Centered) */}
+  <div className="hidden md:flex items-center  space-x-4 lg:justify-start">
+    <Link
+      href="/features"
+      className="text-base text-gray-700 hover:text-gray-900"
+    >
+      Features
+    </Link>
+    <Link
+      href="/faq"
+      className="text-base text-gray-700 hover:text-gray-900"
+    >
+      FAQ
+    </Link>
+    <Link
+      href="/pricing"
+      className="text-base text-gray-700 hover:text-gray-900"
+    >
+      Pricing
+    </Link>
+    <Link
+      href="/contact"
+      className="text-base text-gray-700 hover:text-gray-900 flex items-center"
+    >
+      Contact
+      <RiArrowRightUpLine size={20} className="ml-2" />
+    </Link>
+    <button className="px-3 py-1 text-base text-white bg-yellow-500 rounded-md hover:bg-gray-800">
+      Get Started
+      <BsArrowRightShort size={18} className="ml-1" />
+    </button>
+  </div>
+  {/* Mobile Navigation */}
+  <div className="md:hidden flex items-center space-x-4">
+    <button
+      className="text-2xl text-gray-700"
+      onClick={toggleDropdown}
+      aria-label="Toggle Menu"
+    >
+      {dropdownOpen ? <HiX size={26} /> : <HiMenu size={26} />}
+    </button>
+  </div>
+
+  {/* Dropdown Menu for Mobile */}
+  {dropdownOpen && (
+    <div className="md:hidden absolute right-0 top-20 w-40 bg-white border border-gray-300 shadow-lg ">
+      <Link href="/" className="block px-4 py-2 hover:bg-gray-100">
+        Home
       </Link>
-      <div className="hidden md:flex items-center justify-center space-x-6">
-  <Link href="/features" className="text-lg text-black hover:text-gray-300">
-    Features
-  </Link>
-  <Link href="/faq" className="text-lg text-black hover:text-gray-300">
-    FAQ
-  </Link>
-  <Link href="/pricing" className="text-lg text-black hover:text-gray-300">
-    Pricing
-  </Link>
-  <Link href="/contact" className="text-lg text-black hover:text-gray-300">
-    Contact
-    <RiArrowRightUpLine size={25} className="inline-block ml-2" />
-  </Link>
-  <button className="px-4 py-2 text-lg text-white bg-yellow-600 rounded-md hover:bg-gray-800">
-    Get Started
-    <BsArrowRightShort size={23} className="inline-block ml-2" />
-  </button>
-</div>
-      <div className="md:hidden flex items-center space-x-6">
-        <button
-          className="text-3xl text-black"
-          onClick={toggleDropdown}
-          aria-label="Toggle Menu"
-        >
-          {dropdownOpen ? (
-            <HiChevronUp size={30} />
-          ) : (
-            <HiChevronDown size={30} />
-          )}
-        </button>
-      </div>
-      {dropdownOpen && (
-        <div className="md:hidden absolute right-0 mt-4 w-40 h-60 bg-white border border-gray-300 shadow-lg rounded-md">
-          <Link href="/" className="block px-4 py-2 hover:bg-gray-100">
-            Home
-          </Link>
-          <Link href="/about" className="block px-4 py-2 hover:bg-gray-100">
-            About
-          </Link>
-          <Link href="/contact" className="block px-4 py-2 hover:bg-gray-100">
-            Contact
-          </Link>
-          <Link href="/pricing" className="block px-4 py-2 hover:bg-gray-100">
-            Pricing
-          </Link>
-          <Link href="/faq" className="block px-4 py-2 hover:bg-gray-100">
-            FAQ? <RiArrowRightUpLine size={25} className="inline-block ml-2" />
-          </Link>
-        </div>
-      )}
-    </nav>
+      <Link href="/about" className="block px-4 py-2 hover-bg-gray-100">
+        About
+      </Link>
+      <Link href="/contact" className="block px-4 py-2 hover-bg-gray-100">
+        Contact
+      </Link>
+      <Link href="/pricing" className="block px-4 py-2 hover-bg-gray-100">
+        Pricing
+      </Link>
+      <Link
+        href="/faq"
+        className="block px-4 py-2 flex items-center hover-bg-gray-100"
+      >
+        FAQ
+        <RiArrowRightUpLine size={20} className="ml-2" />
+      </Link>
+    </div>
+  )}
+</nav>
   );
 };
 
