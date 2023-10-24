@@ -18,7 +18,7 @@ const Section1 = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
           transition={{
-            type: "spring",
+            type: 'spring',
             stiffness: 260,
             damping: 20,
             delay: 0.5,
@@ -31,16 +31,25 @@ const Section1 = () => {
             className="text-cyan-300 font-extrabold mb-4"
             sx={{
               fontSize: {
-                xs: "0.7rem", // Small screens
-                sm: "1.5rem", // Medium screens
-                lg: "5rem", // Large screens
+                xs: '1.5rem', // Small screens
+                sm: '2rem', // Medium screens
+                lg: '3rem', // Large screens
               },
             }}
           >
-            Indulge your senses in a world of mouthwatering flavors, culinary
-            inspiration.
+            Indulge your senses in a world of mouthwatering flavors, culinary inspiration.
           </Typography>
-          <Typography variant="body1" className="text-gray-300 mb-4">
+          <Typography
+            variant="body1"
+            className="text-gray-300 mb-4"
+            sx={{
+              fontSize: {
+                xs: '1rem', // Small screens
+                sm: '1.25rem', // Medium screens
+                lg: '1.5rem', // Large screens
+              },
+            }}
+          >
             At Shabir Dinner, we believe that good food is not only about taste
             but also about the stories behind it.
             <br />
