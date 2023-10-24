@@ -68,8 +68,8 @@ const Section3 = () => {
             <p className="mt-4 text-white">
               Our team of dedicated writers brings you the latest trends, unique
               cuisines, and expert tips to elevate your dining experiences.
-              Whether you're a home cook or a seasoned chef, we have something
-              special for you.
+              Whether you&apos;re a home cook or a seasoned chef, we have
+              something special for you.
             </p>
             <div className="mt-6 flex justify-center">
               <button className="hover:bg-yellow-600 text-white border border-yellow-500 font-bold py-2 px-4 rounded-sm w-60">
@@ -149,12 +149,13 @@ const Section3 = () => {
             <p className="mt-4 text-gray-800">
               We are a team of food enthusiasts who love to share our passion
               for cooking with others. Our mission is to help you discover new
-              recipes and cuisines from around the world. We're here to make
-              your life easier by providing you with delicious recipes that are
-              easy to follow and taste great! Subscribe today and get access to
-              our library of over 1000+ recipes from all over the world. You'll
-              also receive exclusive discounts on our products and services, as
-              well as special offers only available through our newsletter.
+              recipes and cuisines from around the world. We&apos;re here to
+              make your life easier by providing you with delicious recipes that
+              are easy to follow and taste great! Subscribe today and get access
+              to our library of over 1000+ recipes from all over the world.
+              You&apos;ll also receive exclusive discounts on our products and
+              services, as well as special offers only available through our
+              newsletter.
             </p>
             <div className="mt-6 flex justify-center">
               <button className="hover-bg-yellow-600 text-white border border-yellow-500 font-bold py-2 px-4 rounded-sm w-60">
