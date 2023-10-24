@@ -103,7 +103,7 @@ const PropertyCard = () => {
             Get started
           </button>
         </div>
-        <p class="mt-4 text-lg leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-slate-400">
+        <p class="mt-4 lg:text-xl sm:text-sm text-lg leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-white">
           This sunny and spacious room is for those traveling light and looking
           for a comfy and cosy place to lay their head for a night or two. This
           beach house sits in a vibrant neighborhood littered with cafes, pubs,
@@ -120,8 +120,6 @@ const Adds = () => {
     <div>
       <PropertyCard />
       <Pricing />
-      {/*<PropertyCard />
-      <PropertyCard />*/}
     </div>
   );
 };

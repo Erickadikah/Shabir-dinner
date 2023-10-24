@@ -12,6 +12,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 // import FaqSimple from '../../components/faq';
 import { MantineProvider } from '@mantine/core';
 import Adds from '../../components/adds';
+// import ContactForm from '../../components/contactForm';
 
 export default function Home() {
    const [isFormVisible, setIsFormVisible] = useState(false);
@@ -67,7 +68,7 @@ export default function Home() {
             maxW='sm' // Limit max width on larger screens
           >
 
-{/*          <ContactForm />*/}
+        {/*<ContactForm />*/}
             <IconButton
               icon={<AiOutlineClose />}
               bg='blue.500'

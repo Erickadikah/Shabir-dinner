@@ -10,7 +10,7 @@ function FloatingChatIcon() {
   };
 
   return (
-    <div className="fixed bottom-10 right-10 z-[999] bg-blue-500 text-white p-2 rounded-full shadow-lg cursor-pointer hover:bg-blue-600 transform hover:scale-105 transition-transform">
+    <div className=" fixed bottom-10 right-10 z-[999] bg-blue-500 text-white p-2 rounded shadow-lg cursor-pointer hover:bg-blue-600 transform hover:scale-105 transition-transform">
   <FaComments className="text-xl" />
   <FaComments className="text-2xl" />
 </div>
