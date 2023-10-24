@@ -31,7 +31,7 @@ const Section1 = () => {
             className="text-cyan-300 font-extrabold mb-4"
             sx={{
               fontSize: {
-                xs: '1.5rem', // Small screens
+                xs: '1.8rem', // Small screens
                 sm: '2rem', // Medium screens
                 lg: '3rem', // Large screens
               },
