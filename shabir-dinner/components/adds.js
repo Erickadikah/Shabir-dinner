@@ -6,15 +6,14 @@ import Pricing from "./projects";
 const PropertyCard = () => {
   return (
     <main
-      class="py-6 px-4 sm:p-6 md:py-10 md:px-8 "
+      className="py-6 px-4 sm:p-6 md:py-10 md:px-8"
       style={{
         height: "70vh",
-        backgroundImage: `linear-gradient(rgba(26, 25, 25, 0.8), rgba(21, 21, 21, 0.8)),url('/images/location.jpg')`,
+        backgroundImage: `linear-gradient(rgba(26, 25, 25, 0.8), rgba(21, 21, 21, 0.8)), url('/images/location.jpg')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
         overflow: "hidden",
-
       }}
     >
       <div class="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2 mt-10">
