@@ -72,7 +72,7 @@ function FooterLinks() {
         </div>
       </div>
     </footer>
-  );
+  )
 }
 
 export default FooterLinks;

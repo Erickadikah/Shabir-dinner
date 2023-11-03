@@ -1,9 +1,8 @@
-import React, {useEffect} from 'react';
-// import Kommunicate from "@kommunicate/kommunicate-chatbot-plugin";
+import React, { useEffect } from 'react';
 
 const KommunicateChat = () => {
-  React.useEffect(() => {
-    (function(d, m) {
+  useEffect(() => {
+    (function (d, m) {
       var kommunicateSettings = {
         appId: '115d591cc261d5b808336b6a84cb51888',
         popupWidget: true,
@@ -20,9 +19,25 @@ const KommunicateChat = () => {
     })(document, window.kommunicate || {});
   }, []);
 
-  return () => {
-    <div></div>;
-}
+  // Function to launch the Kommunicate conversation
+  const launchChat = () => {
+    if (window.Kommunicate) {
+      window.Kommunicate.launchConversation();
+    }
+  };
+
+  return (
+    <div>
+      {/*<button
+        className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full"
+        onClick={launchChat}
+      >
+        Chat with us
+  </button>*/}
+    </div>
+  );
 };
+
 export default KommunicateChat;
+
 

@@ -37,7 +37,7 @@ const Navigation = () => {
     </li>
     <li>
       <Link href="/pricing" className="text-base text-gray-700 hover:underline">
-        Projects
+        Recipe&rsquo;s
       </Link>
     </li>
     <li>

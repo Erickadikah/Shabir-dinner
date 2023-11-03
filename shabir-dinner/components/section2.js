@@ -9,7 +9,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import chefImage from "../public/images/grill1.jpg";
 import chicken from "../public/images/back.jpg";
-import burger from "../public/images/test.jpg"
+import burger from "../public/images/test.jpg";
+import Services from "../components/services";
 
 
 const Section2 = () => {
@@ -135,6 +136,7 @@ const Section2 = () => {
           5
         </AnimatePresence>
       </div>
+      <Services />
     </section>
   );
 };
