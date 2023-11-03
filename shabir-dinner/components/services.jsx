@@ -28,6 +28,16 @@ const Services = () => {
             title="Custom Software Development"
             description="Custom Software Development is the process of conceptualizing, designing, building & deploying"
           />
+          <ServiceCard
+            image="/images/icon-service-5.svg"
+            title="Social Media Marketing"
+            description="Social media marketing is the use of social media platforms to connect with your audience to"
+          />
+          <ServiceCard
+            image="/images/grill-1.jpg"
+            title="Search Engine Optimization"
+            description="Search Engine Optimization is the process of increasing the quality & quantity of website traffic"
+            />
         </div>
       </div>
     </div>

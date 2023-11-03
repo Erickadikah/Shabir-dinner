@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion'
 
-const section4 = () => {
+const Contact = () => {
   return (
     <div className='justify-center items-center w-screen h-screen' style={{ backgroundColor: 'rgb(233,248,245)'}}>
   <h1 className='text-center font-extrabold text-3xl text-black mt-10'>
@@ -74,4 +74,4 @@ const section4 = () => {
   );
 }
 
-export default section4;
+export default Contact;
