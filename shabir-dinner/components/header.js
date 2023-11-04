@@ -5,108 +5,110 @@ import { RiArrowRightUpLine } from "react-icons/ri";
 import { BsArrowRightShort } from "react-icons/bs";
 
 const Navigation = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
   };
 
   return (
-    <nav className="bg-[#F9FAFC] w-full md:h-24 flex items-center justify-between px-6 md:px-12 flex-col md:flex-row">
-  <Link href="/">
-    <div className="flex items-center">
-      <img
-        src="/images/gr.png"
-        alt="Logo"
-        className="h-8 md:h-10 bg-black"
-      />
-    </div>
-  </Link>
+    <nav className="bg-[#F9FAFC] w-full md:h-24 flex items-center justify-between px-6 md:px-12">
+      <div className="flex items-center">
+        <Link href="/">
+          <img
+            src="/images/gr.png"
+            alt="Logo"
+            className="h-8 md:h-10 bg-black"
+          />
+        </Link>
+      </div>
 
-  {/* Desktop Navigation (Centered) */}
-  <ul className="hidden md:flex items-center space-x-4">
-    <li>
-      <Link href="/features" className="text-base text-gray-700 hover:underline">
-        Features
-      </Link>
-    </li>
-    <li>
-      <Link href="/faq" className="text-base text-gray-700 hover:underline">
-        FAQ
-      </Link>
-    </li>
-    <li>
-      <Link href="/pricing" className="text-base text-gray-700 hover:underline">
-        Recipe&rsquo;s
-      </Link>
-    </li>
-    <li>
-      <Link
-        href="/contact"
-        className="text-base text-gray-700 hover:underline flex items-center"
-      >
-        Contact
-        <RiArrowRightUpLine size={20} className="ml-2" />
-      </Link>
-    </li>
-    <li>
-      <button
-        className="px-4 py-2 text-base font-semibold text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none shadow-md focus:shadow-lg focus:bg-yellow-600 transform hover:scale-105 transition-transform flex items-center"
-      >
-        Get Started
-        <BsArrowRightShort size={20} className="ml-2" />
-      </button>
-    </li>
-  </ul>
-
-  {/* Mobile Navigation */}
-  <div className="md:hidden flex items-center space-x-4">
-    <button
-      className="text-2xl text-gray-700"
-      onClick={toggleDropdown}
-      aria-label="Toggle Menu"
-    >
-      {dropdownOpen ? <HiX size={26} /> : <HiMenu size={26} />}
-    </button>
-  </div>
-
-  {/* Dropdown Menu for Mobile */}
-  {dropdownOpen && (
-    <div className="md:hidden absolute right-0 top-20 w-40 bg-white border border-gray-300 shadow-lg">
-      <ul>
+      {/* Desktop Navigation (Centered) */}
+      <ul className="hidden md:flex items-center space-x-4">
         <li>
-          <Link href="/" className="block px-4 py-2 hover:bg-gray-100">
-            Home
+          <Link href="/features" className="text-base text-gray-700 hover:underline">
+            Features
           </Link>
         </li>
         <li>
-          <Link href="/about" className="block px-4 py-2 hover:bg-gray-100">
-            About
+          <Link href="/faq" className="text-base text-gray-700 hover:underline">
+            FAQ
           </Link>
         </li>
         <li>
-          <Link href="/contact" className="block px-4 py-2 hover:bg-gray-100">
+          <Link href="/recipes" className="text-base text-gray-700 hover:underline">
+            Recipes
+          </Link>
+        </li>
+        <li>
+          <Link href="/contact" className="text-base text-gray-700 hover:underline">
             Contact
           </Link>
         </li>
         <li>
-          <Link href="/pricing" className="block px-4 py-2 hover:bg-gray-100">
+          <Link href="/pricing" className="text-base text-gray-700 hover:underline">
             Pricing
           </Link>
         </li>
         <li>
-          <Link
-            href="/faq"
-            className="block px-4 py-2 flex items-center hover:bg-gray-100"
+          <button
+            className="px-4 py-2 text-base font-semibold text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none shadow-md focus:shadow-lg focus:bg-yellow-600 transform hover:scale-105 transition-transform flex items-center"
           >
-            FAQ
-            <RiArrowRightUpLine size={20} className="ml-2" />
-          </Link>
+            Get Started
+            <BsArrowRightShort size={20} className="ml-2" />
+          </button>
         </li>
       </ul>
-    </div>
-  )}
-</nav>
+
+      {/* Mobile Navigation */}
+      <div className="md:hidden flex items-center space-x-4">
+  <button
+    className="text-2xl text-gray-700"
+    onClick={toggleMobileMenu}
+    aria-label="Toggle Menu"
+  >
+    {mobileMenuOpen ? <HiX size={26} /> : <HiMenu size={26} />}
+  </button>
+</div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden fixed inset-0 flex flex-col items-center justify-center bg-white">
+          <ul className="space-y-4">
+            <li>
+              <Link href="/" onClick={toggleMobileMenu}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/features" onClick={toggleMobileMenu}>
+                Features
+              </Link>
+            </li>
+            <li>
+              <Link href="/faq" onClick={toggleMobileMenu}>
+                FAQ
+              </Link>
+            </li>
+            <li>
+              <Link href="/recipes" onClick={toggleMobileMenu}>
+                Recipes
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" onClick={toggleMobileMenu}>
+                Contact
+              </Link>
+            </li>
+            <li>
+              <Link href="/pricing" onClick={toggleMobileMenu}>
+                Pricing
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
+    </nav>
   );
 };
 

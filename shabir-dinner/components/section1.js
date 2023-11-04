@@ -5,12 +5,21 @@ import { Typography } from "@mui/material";
 
 const Section1 = () => {
   return (
-    <section className="bg-gradient relative min-h-screen flex items-center text-white">
+    <section className="relative min-h-screen flex items-center text-white overflow-hidden">
+      {/* Background Video with Parallax Effect */}
       <div className="absolute inset-0 z-[-1]">
-        <video autoPlay loop muted className="w-full h-full object-cover">
+        <video autoPlay loop muted className="w-full h-full object-cover transform translate-y-10">
           <source src="/vedio/background.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-opacity-70 bg-black"></div>
+        {/* Overlay Pattern or Texture */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: 'url("/images/overlay-pattern.png")',
+            opacity: 0.1,
+          }}
+        ></div>
       </div>
       <div className="container mx-auto text-center relative">
         <motion.div
@@ -34,7 +43,7 @@ const Section1 = () => {
                 sm: '2rem',
                 lg: '3rem',
               },
-              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', // Text shadow
+              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
             }}
           >
             Indulge your senses in a world of mouthwatering flavors, culinary inspiration.
@@ -48,7 +57,7 @@ const Section1 = () => {
                 sm: '1.25rem',
                 lg: '1.5rem',
               },
-              textShadow: '1px 1px 2px rgba(0, 0, 0, 0.3)', // Text shadow
+              textShadow: '1px 1px 2px rgba(0, 0, 0, 0.3)',
             }}
           >
             At Shabir Dinner, we believe that good food is not only about taste
@@ -61,7 +70,8 @@ const Section1 = () => {
           variant="contained"
           className="hover:bg-yellow-600 text-white font-semibold px-6 py-2 rounded-full"
           sx={{
-            textShadow: '1px 1px 2px rgba(0, 0, 0, 0.3)', // Text shadow
+            textShadow: '1px 1px 2px rgba(0, 0, 0, 0.3)',
+            backgroundImage: 'linear-gradient(45deg, #f9c923, #f15e75)', // Gradient background
           }}
         >
           Order Now
