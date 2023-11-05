@@ -12,7 +12,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="bg-[#F9FAFC] w-full md:h-24 flex items-center justify-between px-6 md:px-12">
+    <nav className="bg-[#F9FAFC] w-full md:h-20 flex items-center justify-between px-6 md:px-12">
       <div className="flex items-center">
         <Link href="/">
           <img
@@ -73,7 +73,7 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 flex flex-col items-center justify-center bg-white">
+        <div className="md:hidden fixed inset-0 flex flex-col items-center justify-center bg-gray-300">
           <ul className="space-y-4">
             <li>
               <Link href="/" onClick={toggleMobileMenu}>

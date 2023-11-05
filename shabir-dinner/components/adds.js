@@ -1,12 +1,10 @@
 import React from "react";
 import Pricing from "./projects";
 
-
-// PropertyCard component that encapsulates your existing code
 const PropertyCard = () => {
   return (
     <main
-      className="py-6 px-4 sm:p-6 md:py-10 md:px-8"
+      className="py-6 px-4 sm:p-6 md:py-10 md:px-10"
       style={{
         height: "70vh",
         backgroundImage: `linear-gradient(rgba(26, 25, 25, 0.8), rgba(21, 21, 21, 0.8)), url('/images/location.jpg')`,
@@ -22,26 +20,28 @@ const PropertyCard = () => {
             Beach House in Collingwood
           </h1>
           <p class="text-xl leading-4 font-medium text-white sm:text-slate-500 dark:sm:text-slate-400">
-           Our Location
+            Our Location
           </p>
         </div>
         <div class="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
           <img
-            src="/images/add.jpg"
+            src="/images/jelof-rice.jpg"
             alt=""
-            class="w-full h-60 object-cover  sm:h-52 sm:col-span-2 lg:col-span-full"
+            class="w-full h-80 object-cover sm:h-52 sm:col-span-2 lg:col-span-full"
             loading="lazy"
           />
+
           <img
-            src="/images/hack.jpg"
+            src="/images/pilau.jpg"
             alt=""
-            class="hidden w-full h-52 object-cover  sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-40"
+            class="hidden w-full h-80 object-cover sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-40"
             loading="lazy"
           />
+
           <img
-            src="/images/web.jpg"
+            src="/images/jelof-2.jpg"
             alt=""
-            class="hidden w-full h-52 object-cover md:block lg:row-start-2 lg:col-span-2 lg:h-40"
+            class="hidden w-full h-80 object-cover md:block lg:row-start-2 lg:col-span-2 lg:h-40"
             loading="lazy"
           />
         </div>
@@ -103,11 +103,14 @@ const PropertyCard = () => {
           </button>
         </div>
         <p class="mt-4 lg:text-xl sm:text-sm text-lg leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-white">
-          This sunny and spacious room is for those traveling light and looking
-          for a comfy and cosy place to lay their head for a night or two. This
-          beach house sits in a vibrant neighborhood littered with cafes, pubs,
-          restaurants and supermarkets and is close to all the major attractions
-          such as Edinburgh Castle and Arthurs Seat.
+          At Afri Dinner, we take pride in delivering the true essence of
+          African cuisine to your table, with a delightful blend of flavors and
+          culture. Our restaurant offers a wide range of mouthwatering African
+          dishes, featuring a rich tapestry of ingredients and cooking styles
+          that represent the diverse regions of the continent. We are pleased to
+          bring the same exquisite culinary experience to your doorstep through
+          our convenient and reliable delivery service, allowing you to savor
+          the authentic tastes of Africa in the comfort of your own home.
         </p>
       </div>
     </main>
@@ -124,3 +127,4 @@ const Adds = () => {
 };
 
 export default Adds;
+

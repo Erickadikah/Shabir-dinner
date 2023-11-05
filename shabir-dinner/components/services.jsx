@@ -5,7 +5,7 @@ const Services = () => {
     <div className="bg-gray-100 py-20" id="feature">
       <div className="container mx-auto">
         <h2 className="text-3xl text-center font-semibold text-black mb-12">
-          All the digital services that are convenient for you
+          Let&rsquo;s do it together
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           <ServiceCard
@@ -33,11 +33,6 @@ const Services = () => {
             title="Social Media Marketing"
             description="Social media marketing is the use of social media platforms to connect with your audience to"
           />
-          <ServiceCard
-            image="/images/grill-1.jpg"
-            title="Search Engine Optimization"
-            description="Search Engine Optimization is the process of increasing the quality & quantity of website traffic"
-            />
         </div>
       </div>
     </div>
@@ -46,12 +41,14 @@ const Services = () => {
 
 const ServiceCard = ({ image, title, description }) => {
   return (
+    <>
     <div className="bg-white shadow-lg p-4 rounded-lg transform hover:scale-105 transition-transform">
       <img src={image} alt="icon" className="w-16 h-16 mx-auto" />
       <h3 className="text-xl font-semibold text-black mt-4">{title}</h3>
       <p className="text-gray-600 mt-2">{description}</p>
       <span className="text-blue-500 hover:underline block mt-4">Find out more</span>
     </div>
+    </>
   );
 };
 
