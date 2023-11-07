@@ -101,7 +101,7 @@ const Navigation = () => {
               </Link>
             </li>
             <li>
-              <Link href="/pricing" onClick={toggleMobileMenu}>
+              <Link href="/pricing" id='pricing' onClick={toggleMobileMenu}>
                 Pricing
               </Link>
             </li>

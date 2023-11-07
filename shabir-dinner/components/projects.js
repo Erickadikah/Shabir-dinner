@@ -2,32 +2,46 @@ import React from 'react';
 import { GoCheckbox } from 'react-icons/go';
 
 const pricingData = [
-  {
-    title: 'Static, brochure Websites and Apps',
-    description: 'A simple an eye-catching and cost-effective solution you can use to promote your business or company’s services online',
-    price: 'Ksh 45,000',
-    features: ['Responsive Design Samples', 'up to 7 Pages', 'Content layout', 'Content Management System', 'Portfolio and services showcase', 'Assets Optimization i.e Images and Videos', 'Client on-boarding and Documentation', '.com domain + deploynment and hosting', 'Search Engine Optimization (SEO)', 'Friendly Support'],
-    button: 'Get Started',
+   {
+    title: 'Margherita Pizza',
+    description: 'Classic tomato, mozzarella, and basil pizza',
+    price: 'Ksh 550',
+    features: ['Tomato sauce', 'Mozzarella cheese', 'Fresh basil leaves', 'Extra virgin olive oil', 'Fresh garlic', 'Black pepper'],
+    button: 'Order Now',
   },
   {
-    title: 'Dynamic Websites and Apps',
-    description: 'A dynamic application can provide a more customized user experience because it can be designed to respond to user input in real-time.',
-    price: 'Ksh100,000',
-    features: ['Responsive design samples', 'Custom Content Management System', 'Database and Authentication', 'Custom API solution', 'Payment integration i.e Mpesa,paypal & Card', 'Progressive Web Application capabilities', 'Social media intergrations', 'Client On-boarding and Documentation', '.com domain + frontend hosting', 'Backend deploynment and hosting options', 'check iconFriendly Support and much more..'],
-    button: 'Get Started',
+    title: 'Pepperoni Pizza',
+    description: 'Delicious pizza with pepperoni slices and cheese',
+    price: 'Ksh 650',
+    features: ['Tomato sauce', 'Mozzarella cheese', 'Pepperoni slices', 'Fresh basil leaves', 'Extra virgin olive oil', 'Fresh garlic', 'Black pepper'],
+    button: 'Order Now',
   },
   {
-    title: 'E-commerce Applications',
-    description: 'An online marketplace will make it easier to buy or sell goods and services between merchants and customers.',
-    price: 'Ksh 200,000',
-    features: ['Responsive design Process', 'Custom Content Management System', 'Role based Authentication', 'Payment integration i.e Mpesa,paypal & Card', 'Customized Dashboard', 'Shopify, Big-Commerce intergration', 'Top level domains + hosting plans', 'Search Engine Optimization(SEO)', 'Logistics Intergration i.e Sendy', 'riendly Support and much more..'],
-    button: 'Get Started',
+    title: 'Chicken Alfredo Pasta',
+    description: 'Creamy pasta with grilled chicken and Alfredo sauce',
+    price: 'Ksh 750',
+    features: ['Fettuccine pasta', 'Grilled chicken', 'Alfredo sauce', 'Parmesan cheese', 'Black pepper', 'Garlic', 'Parsley'],
+    button: 'Order Now',
+  },
+  {
+    title: 'Caesar Salad',
+    description: 'Fresh salad with romaine lettuce, croutons, and Caesar dressing',
+    price: 'Ksh 350',
+    features: ['Romaine lettuce', 'Croutons', 'Caesar dressing', 'Parmesan cheese', 'Black pepper', 'Lemon juice', 'Olive oil'],
+    button: 'Order Now',
+  },
+  {
+    title: 'Chocolate Brownie',
+    description: 'Rich and gooey chocolate brownie with a scoop of vanilla ice cream',
+    price: 'Ksh 250',
+    features: ['Chocolate brownie', 'Vanilla ice cream', 'Chocolate syrup', 'Whipped cream', 'Cherries', 'Mint leaves', 'Powdered sugar', 'Chocolate chips'],
+    button: 'Order Now',
   },
 ];
 
 const PricingCard = ({ title, description, price, features, button }) => {
   return (
-    <div className="max-w-sm w-100 h-70 p-4 rounded shadow-lg bg-gradient-to-br from-gray-900 to-gray-700 text-white">
+    <div className="max-w-sm w-100 h-70 p-4 rounded shadow-lg bg-gradient-to-br from-gray-900 to-gray-700 text-white" id='pricing'>
       <h1 className="text-center text-2xl font-semibold mt-4 text-yellow-500">{title}</h1>
       <p className="text-center text-sm font-medium text-gray-300 mt-2">{description}</p>
       <p className="text-center text-2xl font-medium text-gray-300">{price}</p>
