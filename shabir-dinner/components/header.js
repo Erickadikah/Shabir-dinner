@@ -12,7 +12,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="bg-[#F9FAFC] w-full md:h-20 flex items-center justify-between px-6 md:px-12">
+    <nav className="bg-gray-100 w-full md:h-20 flex items-center justify-between px-6 md:px-12 sticky top-0 z-50">
       <div className="flex items-center">
         <Link href="/">
           <img
@@ -24,8 +24,8 @@ const Navigation = () => {
       </div>
 
       {/* Desktop Navigation (Centered) */}
-      <ul className="hidden md:flex items-center space-x-4">
-        <li>
+      <ul className="hidden md:flex justify-items-center items-center space-x-4">
+         <li>
           <Link href="/features" className="text-base text-gray-700 hover:underline">
             Features
           </Link>
@@ -62,19 +62,20 @@ const Navigation = () => {
 
       {/* Mobile Navigation */}
       <div className="md:hidden flex items-center space-x-4">
-  <button
-    className="text-2xl text-gray-700"
-    onClick={toggleMobileMenu}
-    aria-label="Toggle Menu"
-  >
-    {mobileMenuOpen ? <HiX size={26} /> : <HiMenu size={26} />}
-  </button>
-</div>
+        <button
+          className="text-2xl text-gray-700"
+          onClick={toggleMobileMenu}
+          aria-label="Toggle Menu"
+        >
+          {mobileMenuOpen ? <HiX size={26} /> : <HiMenu size={26} />}
+        </button>
+      </div>
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 flex flex-col items-center justify-center bg-gray-300">
-          <ul className="space-y-4">
+          {/* ... Your mobile navigation links ... */}
+           <ul className="space-y-4">
             <li>
               <Link href="/" onClick={toggleMobileMenu}>
                 Home
@@ -113,3 +114,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
+

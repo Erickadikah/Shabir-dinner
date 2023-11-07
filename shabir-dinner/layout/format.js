@@ -10,7 +10,7 @@ const format = ({ children }) => {
     <link rel="icon" href="images/favicon.ico" />
         <title>Shabir Dinner</title>
       </Head>
-      <Navigation />
+      <Navigation className='sticky'/>
       <main>{ children }</main>
       <Footer />
     </div>
