@@ -13,7 +13,7 @@ const Section1 = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url("/images/overlay-pattern.png")',
+            backgroundImage: `linear-gradient(rgba(26, 25, 25, 0.8), rgba(21, 21, 21, 0.8)),url("/images/overlay-pattern.png")`,
             opacity: 0.1,
           }}
         ></div>
