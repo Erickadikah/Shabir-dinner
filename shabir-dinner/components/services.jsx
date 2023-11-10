@@ -13,6 +13,13 @@ const Services = () => {
         <source src='/vedio/production.mp4' type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+      <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: 'url("/images/overlay-pattern.png")',
+            opacity: 0.1,
+          }}
+        ></div>
       <div className="container mx-auto relative z-10 h-full">
         <h2 className="text-3xl text-center font-semibold text-black mb-12">
           Let&rsquo;s do it together
@@ -52,7 +59,7 @@ const Services = () => {
 const ServiceCard = ({ image, title, description }) => {
   return (
     <>
-      <div className="bg-red-500 shadow-lg p-4 rounded-lg transform hover:scale-105 transition-transform">
+      <div className="shadow-lg p-4 rounded-lg transform hover:scale-105 transition-transform">
         <img src={image} alt="icon" className="w-16 h-16 mx-auto" />
         <h3 className="text-xl font-semibold text-black mt-4">{title}</h3>
         <p className="text-gray-600 mt-2">{description}</p>
