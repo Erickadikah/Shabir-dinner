@@ -8,7 +8,7 @@ const Services = () => {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover transform translate-y-10 z-[-1]"
+        className="absolute inset-0 w-full h-[85vh] object-cover transform translate-y-10 z-[-1]"
       >
         <source src='/vedio/production.mp4' type="video/mp4" />
         Your browser does not support the video tag.
@@ -45,11 +45,11 @@ const Services = () => {
             title="Custom Software Development"
             description="Custom Software Development is the process of conceptualizing, designing, building & deploying"
           />
-          <ServiceCard
+          {/*<ServiceCard
             image="/images/icon-service-5.svg"
             title="Social Media Marketing"
             description="Social media marketing is the use of social media platforms to connect with your audience to"
-          />
+        />*/}
         </div>
       </div>
     </div>
