@@ -59,7 +59,7 @@ const Services = () => {
 const ServiceCard = ({ image, title, description }) => {
   return (
     <>
-      <div className="shadow-lg p-4 rounded-lg transform hover:scale-105 transition-transform">
+      <div className="bg-gray-100 shadow-lg p-4 rounded-lg transform hover:scale-105 transition-transform">
         <img src={image} alt="icon" className="w-16 h-16 mx-auto" />
         <h3 className="text-xl font-semibold text-black mt-4">{title}</h3>
         <p className="text-gray-600 mt-2">{description}</p>
