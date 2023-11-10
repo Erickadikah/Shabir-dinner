@@ -10,13 +10,15 @@ const Section1 = () => {
         <video autoPlay loop muted className="w-full h-full object-cover transform translate-y-10">
           <source src="/vedio/background.mp4" type="video/mp4" />
         </video>
+        <div className="absolute inset-0">
+        {/* Overlay with linear gradient */}
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `linear-gradient(rgba(26, 25, 25, 0.8), rgba(21, 21, 21, 0.8)),url("/images/overlay-pattern.png")`,
-            opacity: 0.1,
+            background: 'linear-gradient(rgba(26, 25, 25, 0.8), rgba(21, 21, 21, 0.8))',
           }}
-        ></div>
+        />
+      </div>
       </div>
       <div className="container mx-auto text-center relative">
         <motion.div

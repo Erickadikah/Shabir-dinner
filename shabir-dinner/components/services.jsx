@@ -13,13 +13,15 @@ const Services = () => {
         <source src='/vedio/production.mp4' type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div
+      <div className="absolute inset-0">
+        {/* Overlay with linear gradient */}
+        <div
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url("/images/overlay-pattern.png")',
-            opacity: 0.1,
+            background: 'linear-gradient(rgba(26, 25, 25, 0.8), rgba(21, 21, 21, 0.8))',
           }}
-        ></div>
+        />
+      </div>
       <div className="container mx-auto relative z-10 h-full">
         <h2 className="text-3xl text-center font-semibold text-black mb-12">
           Let&rsquo;s do it together
