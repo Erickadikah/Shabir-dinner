@@ -10,7 +10,7 @@ const Services = () => {
         playsInline
         className="absolute inset-0 w-full h-[85vh] object-cover transform translate-y-10 z-[-1]"
       >
-        <source src='/vedio/production.mp4' type="video/mp4" />
+        <source src='/vedio/production2.mp4' type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="absolute inset-0">

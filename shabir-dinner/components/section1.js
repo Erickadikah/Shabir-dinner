@@ -7,7 +7,7 @@ const Section1 = () => {
   return (
     <section className="relative min-h-screen flex items-center text-white overflow-hidden">
       <div className="absolute inset-0 z-[-1]">
-        <video autoPlay loop muted className="w-full h-full object-cover transform translate-y-10">
+        <video autoPlay loop muted className="w-full h-full object-cover transform translate-y-10 sticky">
           <source src="/vedio/background.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0">
