@@ -10,7 +10,6 @@ const Section1 = () => {
         <video autoPlay loop muted className="w-full h-full object-cover transform translate-y-10">
           <source src="/vedio/background.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-opacity-70 bg-black"></div>
         <div
           className="absolute inset-0"
           style={{
@@ -72,7 +71,7 @@ const Section1 = () => {
             </Typography>
             <div className="p-4 bg-gray-800 rounded-lg">
               <Typography variant="body1" className="text-gray-300">
-                "Absolutely delicious! The food at Shabir Dinner is a culinary delight. Every dish tells a unique story."
+                Absolutely delicious! The food at Shabir Dinner is a culinary delight. Every dish tells a unique story. I love it!
               </Typography>
               <Typography variant="caption" className="text-gray-500 mt-2">
                 - John Doe, Food Enthusiast

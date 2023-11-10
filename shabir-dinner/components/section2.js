@@ -10,7 +10,6 @@ import Image from "next/image";
 import chefImage from "../public/images/grill1.jpg";
 import chicken from "../public/images/back.jpg";
 import burger from "../public/images/test.jpg";
-import Services from "../components/services";
 
 
 const Section2 = () => {
@@ -62,6 +61,7 @@ const Section2 = () => {
   ];
 
   return (
+    <>
     <section className="bg-gray-100 py-10  border-b">
       <div className="container mx-auto px-4">
         <h1 className="text-3xl font-extrabold text-center mb-8">
@@ -136,8 +136,8 @@ const Section2 = () => {
           5
         </AnimatePresence>
       </div>
-      <Services />
-    </section>
+      </section>
+    </>
   );
 };
 

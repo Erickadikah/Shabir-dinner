@@ -6,6 +6,7 @@ import Section3 from '../../components/section3';
 import Section5 from '../../components/section5';
 import { MantineProvider } from '@mantine/core';
 import KommunicateChat from '../../components/chat';
+import Services from "../../components/services";
 
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
         <Section5 />
         <Section3 />
         <Section2 />
+        <Services />
         <KommunicateChat />
       </Format>
     </MantineProvider>
