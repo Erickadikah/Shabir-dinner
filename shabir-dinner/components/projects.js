@@ -8,6 +8,7 @@ const pricingData = [
     price: 'Ksh 550',
     features: ['Tomato sauce', 'Mozzarella cheese', 'Fresh basil leaves', 'Extra virgin olive oil', 'Fresh garlic', 'Black pepper'],
     button: 'Order Now',
+    backgroundImage: '/images/mg.jpg'
   },
   {
     title: 'Pepperoni Pizza',
@@ -15,6 +16,7 @@ const pricingData = [
     price: 'Ksh 650',
     features: ['Tomato sauce', 'Mozzarella cheese', 'Pepperoni slices', 'Fresh basil leaves', 'Extra virgin olive oil', 'Fresh garlic', 'Black pepper'],
     button: 'Order Now',
+    backgroundImage: '/images/pizza.jpg'
   },
   {
     title: 'Chicken Alfredo Pasta',
@@ -22,6 +24,7 @@ const pricingData = [
     price: 'Ksh 750',
     features: ['Fettuccine pasta', 'Grilled chicken', 'Alfredo sauce', 'Parmesan cheese', 'Black pepper', 'Garlic', 'Parsley'],
     button: 'Order Now',
+    backgroundImage: '/images/pasta.jpg'
   },
   {
     title: 'Caesar Salad',
@@ -29,6 +32,7 @@ const pricingData = [
     price: 'Ksh 350',
     features: ['Romaine lettuce', 'Croutons', 'Caesar dressing', 'Parmesan cheese', 'Black pepper', 'Lemon juice', 'Olive oil'],
     button: 'Order Now',
+    backgroundImage: '/images/salad.jpg'
   },
   {
     title: 'Chocolate Brownie',
@@ -36,12 +40,19 @@ const pricingData = [
     price: 'Ksh 250',
     features: ['Chocolate brownie', 'Vanilla ice cream', 'Chocolate syrup', 'Whipped cream', 'Cherries', 'Mint leaves', 'Powdered sugar', 'Chocolate chips'],
     button: 'Order Now',
+    backgroundImage: '/images/brownie.jpg'
   },
 ];
 
-const PricingCard = ({ title, description, price, features, button }) => {
+const PricingCard = ({ title, description, price, features, button, backgroundImage }) => {
+  const cardStyle = {
+    backgroundImage: `linear-gradient(rgba(26, 25, 25, 0.8), rgba(21, 21, 21, 0.8)), url(${backgroundImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  };
+
   return (
-    <div className="max-w-sm w-100 h-70 p-4 rounded shadow-lg bg-gradient-to-br from-gray-900 to-gray-700 text-white" id='pricing'>
+    <div className="max-w-sm w-100 h-70 p-4 rounded shadow-lg bg-white text-black" style={cardStyle} id='pricing'>
       <h1 className="text-center text-2xl font-semibold mt-4 text-yellow-500">{title}</h1>
       <p className="text-center text-sm font-medium text-gray-300 mt-2">{description}</p>
       <p className="text-center text-2xl font-medium text-gray-300">{price}</p>
@@ -68,7 +79,7 @@ const Pricing = () => {
       <p className="mt-4 text-center lg:text-xl sm:text-xl leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-slate-700">
         We offer a variety of pricing options to suit your needs.<br />
         Why use several third parties to provide the various services you need? We can provide all services in one easy to access place!
-    </p>
+      </p>
       <div className="flex flex-col sm:flex-row sm:justify-center sm:items-center mt-8 gap-8">
         {pricingData.map((pricing, index) => (
           <PricingCard key={index} {...pricing} />

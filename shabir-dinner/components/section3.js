@@ -165,41 +165,7 @@ const Section3 = () => {
           </div>
         </motion.div>
       </section>
-
       <Adds />
-      {/*<PricingCard
-        title="Lifetime membership"
-        description="Lorem ipsum dolor sit amet consect etur adipisicing elit. Itaque amet indis perferendis blanditiis repellendus etur quidem assumenda."
-        price="$349"
-        include= {[
-          'tidy up your home',
-          'tidy up your home',
-          'tidy up your home',
-        ]}
-        header="Lifetime Membership Pricing"
-      />
-      <PricingCard
-        title="Annual membership"
-        description="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        price="$99"
-        include= {[
-          'tidy up your home',
-          'tidy up your home',
-          'tidy up your home',
-        ]}
-        header="Annual Membership Pricing"
-      />
-      <PricingCard
-        title="Monthly membership"
-        description="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        price="$15"
-        include= {[
-          'tidy up your home',
-          'tidy up your home',
-          'tidy up your home',
-        ]}
-        header="Monthly Membership Pricing"
-      />*/}
     </>
   );
 };
