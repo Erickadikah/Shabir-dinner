@@ -49,6 +49,7 @@ const PricingCard = ({ title, description, price, features, button, backgroundIm
     backgroundImage: `linear-gradient(rgba(26, 25, 25, 0.8), rgba(21, 21, 21, 0.8)), url(${backgroundImage})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    hover: 'transform hover:scale-110',
   };
 
   return (
@@ -80,7 +81,7 @@ const Pricing = () => {
         We offer a variety of pricing options to suit your needs.<br />
         Why use several third parties to provide the various services you need? We can provide all services in one easy to access place!
       </p>
-      <div className="flex flex-col sm:flex-row sm:justify-center sm:items-center mt-8 gap-8">
+      <div className="flex flex-wrap sm:flex-row sm:justify-center sm:items-center mt-8 gap-8">
         {pricingData.map((pricing, index) => (
           <PricingCard key={index} {...pricing} />
         ))}
