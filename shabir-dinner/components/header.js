@@ -51,12 +51,14 @@ const Navigation = () => {
           </Link>
         </li>
         <li>
+        <Link href="/login" className="text-base text-gray-700 hover:underline">
           <button
             className="px-4 py-2 text-base font-semibold text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none shadow-md focus:shadow-lg focus:bg-yellow-600 transform hover:scale-105 transition-transform flex items-center"
           >
             Get Started
             <BsArrowRightShort size={20} className="ml-2" />
           </button>
+          </Link>
         </li>
       </ul>
 
