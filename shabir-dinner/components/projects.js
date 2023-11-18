@@ -42,6 +42,14 @@ const pricingData = [
     button: 'Order Now',
     backgroundImage: '/images/brownie.jpg'
   },
+  {
+    title: 'Chocolate Brownie',
+    description: 'Rich and gooey chocolate brownie with a scoop of vanilla ice cream',
+    price: 'Ksh 250',
+    features: ['Chocolate brownie', 'Vanilla ice cream', 'Chocolate syrup', 'Whipped cream', 'Cherries', 'Mint leaves', 'Powdered sugar', 'Chocolate chips'],
+    button: 'Order Now',
+    backgroundImage: '/images/brownie.jpg'
+  },
 ];
 
 const PricingCard = ({ title, description, price, features, button, backgroundImage }) => {

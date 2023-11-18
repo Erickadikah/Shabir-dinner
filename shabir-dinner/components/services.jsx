@@ -29,12 +29,12 @@ const Services = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           <ServiceCard
             image="/images/icon-service-1.svg"
-            title="Branding & Digital Strategies"
+            title="Become  Cook"
             description="Brand strategy is all about developing a unique identity that distinguishes your business from"
           />
           <ServiceCard
             image="/images/icon-service-2.svg"
-            title="Web Design & App Development"
+            title="We do delivery services services"
             description="Web design & development is an umbrella term that describes the process of creating a website"
           />
           <ServiceCard
@@ -44,14 +44,9 @@ const Services = () => {
           />
           <ServiceCard
             image="/images/icon-service-4.svg"
-            title="Custom Software Development"
+            title="Share your recipes ideas"
             description="Custom Software Development is the process of conceptualizing, designing, building & deploying"
           />
-          {/*<ServiceCard
-            image="/images/icon-service-5.svg"
-            title="Social Media Marketing"
-            description="Social media marketing is the use of social media platforms to connect with your audience to"
-        />*/}
         </div>
       </div>
     </div>
