@@ -33,7 +33,14 @@ export const authOptions = {
   async session(session, user) {
     session.user.id = user.id
     return session
-  }
-}
+  },
 
+  pages: {
+    signIn: '/auth/login',  // Displays signin buttons
+    // signOut: '/auth/signout',
+    // error: '/auth/error', // Error code passed in query string as ?error=
+    verifyRequest: '/auth/verify-request', // (used for check email message)
+    newUser: null // If set, new users will be directed here on first sign in
+  },
+  }
 export default NextAuth(authOptions)
