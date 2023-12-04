@@ -8,6 +8,7 @@
 - JavaScript
 - Tailwind CSS
 - Vercel
+- NextAuth.js
 
 ## How to run
 
@@ -24,4 +25,4 @@
 
 ## Author
 
-- Erick Adikah
+- [Erick Adikah](https://my-portfolio-sand-ten-81.vercel.app/)
