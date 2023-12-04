@@ -17,7 +17,7 @@ export const authOptions = {
       clientId: '74060280128-srahfv87jcjccmc2evv9p2onapjk7248.apps.googleusercontent.com',
       clientSecret: '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',
     }),
-    // ...add more providers here
+    //more providers here
   ],
   callback: {
     redirect: async (url, baseUrl) => {
@@ -37,10 +37,8 @@ export const authOptions = {
 
   pages: {
     signIn: '/auth/login',  // Displays signin buttons
-    // signOut: '/auth/signout',
-    // error: '/auth/error', // Error code passed in query string as ?error=
     verifyRequest: '/auth/verify-request', // (used for check email message)
     newUser: null // If set, new users will be directed here on first sign in
   },
-  }
+}
 export default NextAuth(authOptions)
