@@ -3,6 +3,7 @@ import Link from "next/link";
 import { HiMenu, HiX } from "react-icons/hi";
 import { RiArrowRightUpLine } from "react-icons/ri";
 import { BsArrowRightShort } from "react-icons/bs";
+import { signIn } from "next-auth/react";
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -51,14 +52,16 @@ const Navigation = () => {
           </Link>
         </li>
         <li>
-        <Link href="/login" className="text-base text-gray-700 hover:underline">
           <button
+          onClick={() => {
+            signIn()
+          }}
             className="px-4 py-2 text-base font-semibold text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none shadow-md focus:shadow-lg focus:bg-yellow-600 transform hover:scale-105 transition-transform flex items-center"
           >
             Get Started
             <BsArrowRightShort size={20} className="ml-2" />
           </button>
-          </Link>
+          
         </li>
       </ul>
 

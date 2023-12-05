@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@mui/material";
 import { Typography } from "@mui/material";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 const Section1 = () => {
   return (
@@ -89,6 +90,9 @@ const Section1 = () => {
               Discover our exquisite menu and experience the magic of culinary inspiration. Order now!
             </Typography>
             <Button
+              onClick={() => {
+                signIn()
+              }}
               variant="contained"
               className="bg-white text-yellow-600 font-semibold px-6 py-2 mt-4"
               sx={{
