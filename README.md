@@ -21,7 +21,7 @@
 --Not yet deployed
 
 ## Screenshots
---Not yet deployed
+![image](https://res.cloudinary.com/dia49kn8r/image/upload/v1701734916/Screenshot_from_2023-12-05_03-08-04_szpp44.png)
 
 ## Author
 
