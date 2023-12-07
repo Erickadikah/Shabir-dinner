@@ -26,8 +26,11 @@ const Navigation = () => {
 
       {/* Desktop Navigation (Centered) */}
       <ul className="hidden md:flex justify-items-center items-center space-x-4">
-         <li>
-          <Link href="/features" className="text-base text-gray-700 hover:underline">
+        <li>
+          <Link
+            href="/features"
+            className="text-base text-gray-700 hover:underline"
+          >
             Features
           </Link>
         </li>
@@ -37,31 +40,39 @@ const Navigation = () => {
           </Link>
         </li>
         <li>
-          <Link href="/recipes" className="text-base text-gray-700 hover:underline">
+          <Link
+            href="/recipes"
+            className="text-base text-gray-700 hover:underline"
+          >
             Recipes
           </Link>
         </li>
         <li>
-          <Link href="/contact" className="text-base text-gray-700 hover:underline">
+          <Link
+            href="/contact"
+            className="text-base text-gray-700 hover:underline"
+          >
             Contact
           </Link>
         </li>
         <li>
-          <Link href="/pricing" className="text-base text-gray-700 hover:underline">
+          <Link
+            href="/pricing"
+            className="text-base text-gray-700 hover:underline"
+          >
             Pricing
           </Link>
         </li>
         <li>
           <button
-          onClick={() => {
-            signIn()
-          }}
+            onClick={() => {
+              signIn();
+            }}
             className="px-4 py-2 text-base font-semibold text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none shadow-md focus:shadow-lg focus:bg-yellow-600 transform hover:scale-105 transition-transform flex items-center"
           >
             Get Started
             <BsArrowRightShort size={20} className="ml-2" />
           </button>
-          
         </li>
       </ul>
 
@@ -80,7 +91,7 @@ const Navigation = () => {
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 flex flex-col items-center justify-center bg-gray-300">
           {/* ... Your mobile navigation links ... */}
-           <ul className="space-y-4">
+          <ul className="space-y-4">
             <li>
               <Link href="/" onClick={toggleMobileMenu}>
                 Home
@@ -107,7 +118,7 @@ const Navigation = () => {
               </Link>
             </li>
             <li>
-              <Link href="/pricing" id='pricing' onClick={toggleMobileMenu}>
+              <Link href="/pricing" id="pricing" onClick={toggleMobileMenu}>
                 Pricing
               </Link>
             </li>
@@ -119,4 +130,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-

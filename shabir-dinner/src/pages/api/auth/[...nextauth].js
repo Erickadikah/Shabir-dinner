@@ -19,14 +19,15 @@ export const authOptions = {
       clientSecret: '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',
     }),
     CredentialsProvider({
-      type: 'credentials',
+      id:'credentials',
+      name: 'credentials',
       Credentials: {},
-      authorize(credentials, req) {
+      authorize(credentials) {
         let { email, password } = credentials; // Use let instead of const
 
         // Convert email and password to lowercase
-        email = email.toLowerCase();
-        password = password.toLowerCase();
+        email = email?.toLowerCase();
+        password = password?.toLowerCase();
 
         if (email === 'erikadikah2030@gmail.com' && password === '123456') {
           const user = { id: 1, name: 'Admin' };
@@ -61,7 +62,7 @@ export const authOptions = {
   },
 
   pages: {
-    signIn: '/pages/signin',  // Displays signin buttons
+    signIn: '/signin', // Displays signin buttons
     verifyRequest: '/auth/verify-request', // (used for check email message)
     newUser: null // If set, new users will be directed here on first sign in
   },
