@@ -23,7 +23,7 @@ export default function Home() {
         <Section5 />
         <Section3 />
         <Section2 />
-        <Services />
+        {/*<Services />*/}
         <KommunicateChat />
       </Format>
     </MantineProvider>
