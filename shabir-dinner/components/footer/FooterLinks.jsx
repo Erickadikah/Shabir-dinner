@@ -20,12 +20,12 @@ function FooterLinks() {
           <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
             <div className="lg:flex lg:items-start lg:gap-8">
               <div className="text-teal-300">
-                <img src="../../public/images/logo.png" alt="Logo" className="h-15" />
+                <img src="/images/logo.png" alt="Logo" className="h-15 md:h-10" />
               </div>
               <div className="mt-8 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-16">
                 <div className="col-span-2">
                   <div>
-                    <h2 className="lg:text-4xl sm:text-2xl font-bold text-white">
+                    <h2 className="lg:text-2xl sm:text-2xl font-bold text-white">
                       Get the latest news and offers!
                     </h2>
                     <p className="lg:text-2xl sm:text-xl mt-4 text-gray-400">

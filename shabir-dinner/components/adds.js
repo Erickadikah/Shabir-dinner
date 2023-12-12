@@ -1,5 +1,6 @@
 import React from "react";
 import Pricing from "./projects";
+import Link from "next/link";
 
 const PropertyCard = () => {
   return (
@@ -95,12 +96,14 @@ const PropertyCard = () => {
           </dd>
         </dl>
         <div class="mt-4 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4">
-          <button
-            type="button"
-            class="bg-indigo-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg"
-          >
-            Get started
-          </button>
+        <Link href="/signin">
+        <button
+          type="button"
+          class="bg-indigo-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg"
+        >
+          Get started
+        </button>
+        </Link>
         </div>
         <p class="mt-4 lg:text-xl sm:text-sm text-lg leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-white">
           At Afri Dinner, we take pride in delivering the true essence of

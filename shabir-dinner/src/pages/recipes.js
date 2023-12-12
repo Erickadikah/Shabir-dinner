@@ -59,10 +59,12 @@ const Recipes = () => {
         <div className="bg-white">
             <Navigation />
             <div className="container mx-auto py-8">
-                <h1 className="text-3xl font-bold text-gray-800 mb-6 text-center">Recipes</h1>
-                <p className="text-gray-600 text-center mb-6">
-                On this page, Discover loads of delicious African recipes!
-                </p>
+            <div>
+            <h1 className="text-4xl font-bold text-gray-800 mb-6 text-center">Recipes</h1>
+            <p className="text-gray-600 text-2xl text-center mb-6">
+            Discover loads of delicious African recipes!
+            </p>
+            </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {recipeExamples.map((recipe, index) => (
                         <div key={index} className="bg-white shadow-lg">
