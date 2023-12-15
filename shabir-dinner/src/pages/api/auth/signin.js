@@ -12,7 +12,7 @@ export default async function handler(req, res) {
 
       return res.status(200).json({ success: true, user });
     } else {
-      return res.status(401).json({ success: false, message: message });
+      return res.status(401).json({ success: false, message: 'Aunthenctication failed' });
     }
   } else {
     return res.status(405).json({ success: false, message: 'Method Not Allowed' });

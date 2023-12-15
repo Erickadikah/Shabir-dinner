@@ -78,6 +78,11 @@ const SignInForm = () => {
           >
             Sign In
           </button>
+          <button className="w-full mt-4 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-all duration-300">
+          <p className='text-sm'>
+          Dont have account? <a href="/signup">Sign Up</a>
+          </p>
+          </button>
         </form>
       </div>
     </div>
