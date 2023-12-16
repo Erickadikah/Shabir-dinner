@@ -1,6 +1,7 @@
 // SignInForm.jsx
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const SignInForm = () => {
   const router = useRouter();
@@ -83,7 +84,7 @@ const SignInForm = () => {
           </button>
           <button className="w-full mt-4 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-all duration-300">
           <p className='text-sm'>
-          Dont have account? <a href="/signup">Sign Up</a>
+          Dont have account? <Link href="/signup">Sign Up</Link>
           </p>
           </button>
         </form>
