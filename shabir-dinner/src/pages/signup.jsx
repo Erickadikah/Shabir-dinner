@@ -1,6 +1,9 @@
 import React from "react";
+// import { useHistory } from 'react-router-dom';
+import { useRouter } from 'next/router';
 
 const Signup = () => {
+  const router = useRouter();
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -10,7 +13,7 @@ const Signup = () => {
 
     // Perform form validation, data sanitization, and send signup request to the server
     try {
-      const response = await fetch("/api/signup", {
+      const response = await fetch("/api/auth/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -24,6 +27,7 @@ const Signup = () => {
         const data = await response.json();
         console.log("Signup successful:", data.user);
         // Redirect or perform actions upon successful signup
+         router.push('/signin');
         
 
       } else {

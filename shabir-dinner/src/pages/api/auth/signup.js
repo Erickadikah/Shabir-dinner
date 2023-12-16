@@ -1,25 +1,27 @@
-// pages/api/signup.js
-
-import { connectToDatabase } from '../../utils/db'; // Replace with your database connection logic
+// pages/api/auth/signup.js
+import connectToDatabase from '../../../../utils/db';
+import User from '../../../../models/User';
 
 export default async function handler(req, res) {
+  await connectToDatabase();
+
   if (req.method === 'POST') {
     const { name, email, password } = req.body;
 
-    // Perform form validation or any necessary processing
-    if (!name || !email || !password) {
-      return res.status(400).json({ success: false, message: 'Please provide name, email, and password.' });
-    }
-
     try {
-      // Example: Save the user to a database (this is just a placeholder)
-      const db = await connectToDatabase(); // Replace with your database connection function
-      const users = db.collection('users'); // Replace 'users' with your collection name
+      const existingUser = await User.findOne({ email });
 
-      // Example using a hypothetical database library:
-      // await users.insertOne({ name, email, password });
+      if (existingUser) {
+        return res.status(400).json({ success: false, message: 'Email is already registered.' });
+      }
 
-      // Respond with success message
+      const newUser = new User({
+        name,
+        email,
+        password, // Ensure you hash the password before saving in production
+      });
+
+      await newUser.save();
       return res.status(201).json({ success: true, message: 'User created successfully!' });
     } catch (error) {
       console.error('Error creating user:', error);

@@ -1,14 +1,10 @@
 // utils/db.js
 import mongoose from 'mongoose';
 
-const MONGODB_URI = process.env.MONGODB_URI;
-const MONGODB_DB = process.env.MONGODB_DB;
+const MONGODB_URI = process.env.MONGODB_URI ;
+// 'mongodb+srv://erickadikah2030:7IxsoEWfMRZTrtGC@cluster0.po22n0u.mongodb.net/ArtGalary';
 
-if (!MONGODB_URI || !MONGODB_DB) {
-  throw new Error('Please define the MONGODB_URI and MONGODB_DB environment variables inside .env.local');
-}
-
-const connectDB = async () => {
+const connectToDatabase = async () => {
   try {
     await mongoose.connect(MONGODB_URI, {
       useNewUrlParser: true,
@@ -21,4 +17,4 @@ const connectDB = async () => {
   }
 };
 
-export default connectDB;
+export default connectToDatabase;
