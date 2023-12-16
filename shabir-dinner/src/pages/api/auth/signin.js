@@ -13,18 +13,26 @@ export default async function handler(req, res) {
       const existingUser = await User.findOne({ email });
 
       if (!existingUser) {
-        return res.status(401).json({ success: false, message: 'Authentication failed' });
+        return res.status(401).json({ success: false, message: 'Authentication failed: User not found' });
       }
 
-      const passwordMatch = await bcrypt.compare(password, existingUser.password);
+      const storedPassword = existingUser.password.trim();
+      const providedPassword = password.trim();
+
+      console.log('Retrieved hashed password from database:', storedPassword);
+
+      console.log('Stored Password Length:', storedPassword.length);
+      console.log('Provided Password Length:', providedPassword.length);
+
+      const passwordMatch = await bcrypt.compare(providedPassword, storedPassword);
+
+      console.log('Password comparison result:', passwordMatch);
 
       if (passwordMatch) {
-        // Passwords match - user is authenticated
-        // Perform actions upon successful login (e.g., set up session or JWT token)
         return res.status(200).json({ success: true, user: existingUser });
       } else {
-        // Passwords don't match - authentication failed
-        return res.status(401).json({ success: false, message: 'Authentication failed' });
+        console.log('Provided password:', providedPassword);
+        return res.status(401).json({ success: false, message: 'Authentication failed: Incorrect password' });
       }
     } catch (error) {
       console.error('Error authenticating user:', error);
