@@ -5,33 +5,27 @@ import bcrypt from 'bcrypt';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const { email, password } = req.body;
-
     try {
       await connectToDatabase();
 
+      const { email, password } = req.body;
+
       const existingUser = await User.findOne({ email });
+      console.log(existingUser)
 
       if (!existingUser) {
         return res.status(401).json({ success: false, message: 'Authentication failed: User not found' });
       }
 
-      const storedPassword = existingUser.password.trim();
-      const providedPassword = password.trim();
+      const storedPasswordHash = existingUser.password;
 
-      console.log('Retrieved hashed password from database:', storedPassword);
-
-      console.log('Stored Password Length:', storedPassword.length);
-      console.log('Provided Password Length:', providedPassword.length);
-
-      const passwordMatch = await bcrypt.compare(providedPassword, storedPassword);
-
-      console.log('Password comparison result:', passwordMatch);
+      const passwordMatch = await bcrypt.compare(password, storedPasswordHash);
 
       if (passwordMatch) {
+        // Passwords match - authentication successful
         return res.status(200).json({ success: true, user: existingUser });
       } else {
-        console.log('Provided password:', providedPassword);
+        // Passwords don't match
         return res.status(401).json({ success: false, message: 'Authentication failed: Incorrect password' });
       }
     } catch (error) {

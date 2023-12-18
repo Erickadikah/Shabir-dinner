@@ -13,13 +13,13 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="bg-gray-100 w-full md:h-20 flex items-center justify-between px-6 md:px-12 sticky top-0 z-50">
+    <nav className="bg-gray-100 w-full md:h-20 flex items-center justify-between px-6 md:px-12 sticky top-0 shadow-emerald-950">
       <div className="flex items-center">
         <Link href="/">
           <img
-            src="/images/gr.png"
+            src="/images/favicon.ico"
             alt="Logo"
-            className="h-8 md:h-10 bg-black"
+            className="h-15"
           />
         </Link>
       </div>
