@@ -2,7 +2,7 @@ import React from 'react';
 
 const Section5 = () => {
   return (
-    <div className='bg-gray-800 py-8'>
+    <div className='bg-[#6A8E24] py-8'>
       <div className="container mx-auto text-center">
         <h1 className="text-3xl text-white font-semibold">
           Subscribe to our newsletter

@@ -20,10 +20,10 @@ export default function Home() {
     <MantineProvider>
       <Format>
         <Section1 />
-        <Section5 />
         <Section3 />
         <Section2 />
         {/*<Services />*/}
+        <Section5 />
         <KommunicateChat />
       </Format>
     </MantineProvider>

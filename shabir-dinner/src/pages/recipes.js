@@ -2,6 +2,7 @@ import React from 'react';
 import FooterLinks from '../../components/footer/FooterLinks';
 import Navigation from '../../components/header';
 import { GoCheckbox } from 'react-icons/go';
+import Section5 from '../../components/section5';
 
 const Recipes = () => {
     const recipeExamples = [
@@ -88,6 +89,7 @@ const Recipes = () => {
                     ))}
                 </div>
             </div>
+            <Section5 />
             <FooterLinks />
         </div>
     );
