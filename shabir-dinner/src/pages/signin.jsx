@@ -22,7 +22,7 @@ const SignInForm = () => {
         const data = await response.json();
         console.log('Authentication successful:', data.user);
         // Redirect or perform actions upon successful authentication
-        router.push('/recipes'); // Redirect to the dashboard upon successful login
+        router.push('/home'); // Redirect to the dashboard upon successful login
       } else {
         const errorData = await response.json();
         console.error('Authentication failed:', errorData.message);
