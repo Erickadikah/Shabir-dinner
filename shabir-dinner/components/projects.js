@@ -81,7 +81,7 @@ const PricingCard = ({ title, description, price, features, button, backgroundIm
 
 const Pricing = () => {
   return (
-    <div className="justify-center items-center p-8 bg-yellow-500" >
+    <div className="justify-center items-center p-8 bg-[#A1907D]" >
       <h1 className="mt-1 text-4xl text-center font-semibold text-black sm:text-slate-900 md:text-2xl dark:sm:text-black">
         Competitive Pricing
       </h1>
