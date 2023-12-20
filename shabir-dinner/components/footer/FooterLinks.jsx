@@ -25,10 +25,10 @@ function FooterLinks() {
               <div className="mt-8 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-16">
                 <div className="col-span-2">
                   <div>
-                    <h2 className="lg:text-2xl sm:text-2xl font-bold text-white">
+                    <h2 className="lg:text-xl sm:text-xl font-bold text-white">
                       Get the latest news and offers!
                     </h2>
-                    <p className="lg:text-2xl sm:text-xl mt-4 text-gray-400">
+                    <p className="lg:text-xl sm:text-lg mt-4 text-gray-400">
                       Sign up to get updates of new amazing products and offers.
                       Save More!
                     </p>
@@ -342,7 +342,7 @@ function FooterLinks() {
           }}
           className="items-center gap-2"
         >
-          <p style={{ margin: 0 }} className="lg:text-xl sm:text-lg">Back To Top</p>
+          <p style={{ margin: 0 }} className="lg:text-lg sm:text-sm">Back To Top</p>
           <p style={{ margin: 0 }}>{/*<FaArrowUp size={14} />*/}</p>
         </div>
       </div>
